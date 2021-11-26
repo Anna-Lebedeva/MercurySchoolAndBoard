@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+        viewBox="0 0 64 64"
+        version="1.1"
+        id="svg3241"
+        sodipodi:docname="ellipse.svg"
+        inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns="http://www.w3.org/2000/svg"
+>
+  <defs
+     id="defs3245" />
+  <sodipodi:namedview
+     id="namedview3243"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="12.6875"
+     inkscape:cx="31.960591"
+     inkscape:cy="25.73399"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3241" />
+  <linearGradient
+     id="NIRhmNNseDLSSYMRB0cQYa"
+     x1="32"
+     x2="32"
+     y1="8.191"
+     y2="55.448"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="matrix(0.79349754,0,0,1.0346798,6.6080792,-1.2427587)">
+    <stop
+       offset="0"
+       stop-color="#6dc7ff"
+       id="stop3220" />
+    <stop
+       offset="1"
+       stop-color="#e6abff"
+       id="stop3222" />
+  </linearGradient>
+  <path
+     fill="url(#NIRhmNNseDLSSYMRB0cQYa)"
+     d="M 32,6 C 21.04418,6 12.162562,17.581171 12.162562,31.866995 12.162562,46.152819 21.04418,57.73399 32,57.73399 c 10.955821,0 19.837439,-11.581171 19.837439,-25.866995 C 51.837439,17.581171 42.955821,6 32,6 Z m 0,47.595271 c -9.202984,0 -16.663448,-9.72806 -16.663448,-21.728276 0,-12.000216 7.460464,-21.728276 16.663448,-21.728276 9.202985,0 16.663449,9.72806 16.663449,21.728276 0,12.000216 -7.460464,21.728276 -16.663449,21.728276 z"
+     id="path3225"
+     style="fill:url(#NIRhmNNseDLSSYMRB0cQYa);stroke-width:0.906099" />
+  <linearGradient
+     id="NIRhmNNseDLSSYMRB0cQYb"
+     x1="32"
+     x2="32"
+     y1="6.574"
+     y2="57.919"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="matrix(0.80598712,0,0,1.0257673,6.1295945,-1.7309587)">
+    <stop
+       offset="0"
+       stop-color="#1a6dff"
+       id="stop3227" />
+    <stop
+       offset="1"
+       stop-color="#c822ff"
+       id="stop3229" />
+  </linearGradient>
+  <path
+     fill="url(#NIRhmNNseDLSSYMRB0cQYb)"
+     d="m 31.921182,4.4236453 c -11.555437,0 -20.955665,11.9635247 -20.955665,26.6699507 0,14.706427 9.400228,26.669951 20.955665,26.669951 11.555437,0 20.955665,-11.963524 20.955665,-26.669951 0,-14.706426 -9.400228,-26.6699507 -20.955665,-26.6699507 z m 0,51.2883667 c -10.665627,0 -19.343691,-11.044437 -19.343691,-24.618416 0,-13.573979 8.678064,-24.618416 19.343691,-24.618416 10.665628,0 19.343691,11.044437 19.343691,24.618416 0,13.573979 -8.678063,24.618416 -19.343691,24.618416 z"
+     id="path3232"
+     style="fill:url(#NIRhmNNseDLSSYMRB0cQYb);stroke-width:0.909261" />
+  <linearGradient
+     id="NIRhmNNseDLSSYMRB0cQYc"
+     x1="32"
+     x2="32"
+     y1="6.574"
+     y2="57.919"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="matrix(0.76712942,0,0,1.0224654,7.6094939,-1.2131322)">
+    <stop
+       offset="0"
+       stop-color="#1a6dff"
+       id="stop3234" />
+    <stop
+       offset="1"
+       stop-color="#c822ff"
+       id="stop3236" />
+  </linearGradient>
+  <path
+     fill="url(#NIRhmNNseDLSSYMRB0cQYc)"
+     d="m 32.157636,9.011522 c -9.306047,0 -16.876847,10.090711 -16.876847,22.494239 0,12.403527 7.5708,22.494239 16.876847,22.494239 9.306047,0 16.876848,-10.090712 16.876848,-22.494239 0,-12.403528 -7.570801,-22.494239 -16.876848,-22.494239 z m 0,42.943547 c -8.459903,0 -15.342588,-9.173559 -15.342588,-20.449308 0,-11.275749 6.882685,-20.449309 15.342588,-20.449309 8.459904,0 15.342589,9.17356 15.342589,20.449309 0,11.275749 -6.882685,20.449308 -15.342589,20.449308 z"
+     id="path3239"
+     style="fill:url(#NIRhmNNseDLSSYMRB0cQYc);stroke-width:0.885643" />
+</svg>

@@ -1,0 +1,15 @@
+{
+  "name": "vendor_name/mercury_school",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "user",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "vendor/vlucas/phpdotenv": "~4.2.1"
+  }
+}

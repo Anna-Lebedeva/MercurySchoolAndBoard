@@ -1,0 +1,1 @@
+Основа взята отсюда https://github.com/webdevops/php-docker-boilerplate/
