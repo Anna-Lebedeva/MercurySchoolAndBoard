@@ -4,11 +4,12 @@ services:
 
   school:
     build:
-      context: ./school
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile-school
     restart: always
     links:
       - mysql
+      - board
     ports:
       - "80:80"
       - "443:443"
@@ -48,10 +49,11 @@ services:
   board:
     volumes:
       - /opt/app/server-data:/opt/app/server-data
+      - board:/opt/app
     ports:
       - '5001:443'
     build:
-      context: ./school
+      context: ./board
       dockerfile: Dockerfile
     restart: on-failure
     deploy:
@@ -62,3 +64,4 @@ services:
 
 volumes:
   mysql:
+  board:

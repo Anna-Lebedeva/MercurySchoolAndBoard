@@ -11,4 +11,4 @@ RUN ln -sf /opt/docker/etc/cron/crontab /etc/cron.d/docker-boilerplate \
     && ln -sf /opt/docker/etc/php/development.ini /opt/docker/etc/php/php.ini
 
 # Configure volume/workdir
-WORKDIR /app/
+WORKDIR /school/
