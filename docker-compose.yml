@@ -5,7 +5,7 @@ services:
   school:
     build:
       context: .
-      dockerfile: Dockerfile-school
+      dockerfile: school.Dockerfile
     restart: always
     links:
       - mysql
