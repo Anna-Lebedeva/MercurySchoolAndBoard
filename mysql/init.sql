@@ -23,6 +23,7 @@ create table if not exists raspisanie
     profile_id int unsigned default 0  not null,
     url        tinytext charset latin1 null,
     title      varchar(200) default '' not null,
+    profile_uchitel_id int             null,
     PRIMARY KEY (ID)
     )
     engine = MyISAM
