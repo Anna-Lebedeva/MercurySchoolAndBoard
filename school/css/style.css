@@ -135,7 +135,7 @@ h2 {
 .banner_mobile {
     height: 300px;
     width: 100%;
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -166,7 +166,7 @@ h2 {
 }
 
 .info-card-block-left, .info-card-block-right {
-    display: block;
+    display: flex;
     flex-direction: column;
     margin-top: 30px;
 }
@@ -197,12 +197,12 @@ h2 {
 }
 
 .info-card {
-    display: inline-block;
+    display: grid;
     justify-items: center;
     align-items: center;
     align-content: stretch;
     justify-content: center;
-    width: 100%;
+    width: 700px;
     min-height: 80px;
     font-size: 24px;
     /*background-color: #9A77F1;*/
@@ -277,7 +277,7 @@ h2 {
     }
 
     .prices {
-        display: block;
+        display: flex;
         justify-content: center;
         min-height: 250px
     }
@@ -331,7 +331,7 @@ h2 {
 }
 
 .auth-buttons {
-    display: block;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     transition: background-color 0.2s;
