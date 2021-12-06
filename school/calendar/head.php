@@ -249,20 +249,20 @@
                 <?php
                 if (intval($clNav->flag_uchitel) == 1)  //это учитель
                 {
-                    $r2 =      $clMysql->query("SELECT * FROM raspisanie WHERE profile_uchitel_id='$clNav->profile_id'");
+                    $r2 = $clMysql->query("SELECT * FROM raspisanie WHERE profile_uchitel_id='$clNav->profile_id'");
                 }
                 else
                 {
-                    $r2 =      $clMysql->query("SELECT * FROM raspisanie WHERE profile_id='$clNav->profile_id' and profile_uchitel_id='$clNav->profile_uchitel_id'");
+                    $r2 = $clMysql->query("SELECT * FROM raspisanie WHERE profile_id='$clNav->profile_id' and profile_uchitel_id='$clNav->profile_uchitel_id'");
                 }
                 while ($row= $r2->fetch_array()) { ?>
                 {
                     backgroundColor: '#a941c2',
-                    id: '<?=$row['id']?>',
-                    title: '<?=$row['title']?>',
-                    start: '<?=$row['data_yroka']?>',
-                    end: '<?=$row['data_yroka']?>',
-                    id_row: '<?=$row['id']?>'
+                    id: '<?=$row["id"]?>',
+                    title: '<?=$row["title"]?>',
+                    start: '<?=$row["data_yroka"]?>',
+                    end: '<?=$row["data_yroka"]?>',
+                    id_row: '<?=$row["id"]?>'
                 },
                 <?php } ?>
         ]
