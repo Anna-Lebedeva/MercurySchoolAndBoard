@@ -249,52 +249,23 @@
                 <?php
                 if (intval($clNav->flag_uchitel) == 1)  //это учитель
                 {
-
-
-                    $r2 =      $clMysql->query("SELECT * FROM raspisanie WHERE  profile_uchitel_id='$clNav->profile_id'");
-
+                    $r2 =      $clMysql->query("SELECT * FROM raspisanie WHERE profile_uchitel_id='$clNav->profile_id'");
                 }
                 else
                 {
                     $r2 =      $clMysql->query("SELECT * FROM raspisanie WHERE profile_id='$clNav->profile_id' and profile_uchitel_id='$clNav->profile_uchitel_id'");
-
                 }
-                $i = 0;
-                 while ($row2 = $r2->fetch_array())
-                {$i++;
-                ?>
-
+                while ($row= $r2->fetch_array()) { ?>
                 {
-
                     backgroundColor: '#a941c2',
-                    id: '<?=$row2['id']?>',
-                    title: '<?=$row2['title']?>',
-                    start: '<?=$row2['data_yroka']?>',
-                    end: '<?=$row2['data_yroka']?>',
-                    id_row: '<?=$row2['id']?>'
-                }
-
-
-
-            <?
-
-            if ($i <> $r2->num_rows)
-            {
-                ?>,<?
-            }
-            ?>
-
-
-
-
-
-        <?
-
-        }
-        ?>
-
-
-]
+                    id: '<?=$row['id']?>',
+                    title: '<?=$row['title']?>',
+                    start: '<?=$row['data_yroka']?>',
+                    end: '<?=$row['data_yroka']?>',
+                    id_row: '<?=$row['id']?>'
+                },
+                <?php } ?>
+        ]
         });
         calendar.setOption('locale', 'ru');
         calendar.render();

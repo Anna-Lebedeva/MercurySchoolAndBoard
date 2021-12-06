@@ -1,2 +1,2 @@
 <?php
-ChromePhp::log(1);
+//ChromePhp::log(1);
