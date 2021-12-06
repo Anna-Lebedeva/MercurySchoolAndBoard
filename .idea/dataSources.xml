@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://localhost:13306/mercuryschool</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="mercuryschool@google_cloud" uuid="e8ac706c-1a5c-4876-a4a3-330bd6dc06a8">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://35.217.41.83:13306/mercuryschool</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

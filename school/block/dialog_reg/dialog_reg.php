@@ -32,10 +32,10 @@
         margin-left: -160px;
     }
 </style>
-<div class="modal-form modal-form-reg dialog2 dialog_reg" id="dialog_reg" style="display: none">
+<div class="modal-form dialog2 dialog_reg" id="dialog_reg" style="display: none">
     <div style="border-bottom: 1px solid #908bd9;">
         <div style="float: right; margin-top: 15px; margin-right: 15px;cursor: pointer;"
-             onclick="document.getElementById('dialog_reg').style.display='none';document.getElementById('fade').style.display='none';">
+             onclick="document.getElementById('dialog_reg').style.display='none';$('#fade').css({display:'none'});">
             <img src="/img/close.png" alt="x"></div>
         <div class="h1" style="padding-top: 22px;
     padding-left: 21px;
@@ -154,7 +154,8 @@
             }
             if (h.includes('success')) {
                 $('.dialog_reg').css({display: 'none'});
-                alert('Сообщение успешно отправлено');
+                $('#fade').css({display: 'none'});
+                $('#messages').html('Сообщение успешно отправлено').slideDown(600).delay(3000).slideUp(600);
             }
             if (h.includes('email_send_error')) {
                 $('.input_email').animate({backgroundColor: 'red'}, 500, function () {

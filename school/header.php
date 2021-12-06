@@ -44,7 +44,9 @@ $clNav = new clNav($clMysql);
 <body>
 
 <div id="fade" class="fade"
-     onclick="$('.dialog_reg').css({display:'none'});$('.dialog_auth').css({display:'none'});$('.fade').css({display:'none'});"></div>
+     onclick="$('.dialog_reg').css({display:'none'});$('.dialog_auth').css({display:'none'});
+              $('.dialog_calendar').css({display:'none'});$('.fade').css({display:'none'});">
+</div>
 
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/block/dialog_auth/dialog_auth.php';
@@ -70,13 +72,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
         <td class="main_td">
             <table style="height: 100%; width: 100%; box-shadow: 0 0 5px -2px #000;" cellpadding="0" cellspacing="0">
                 <tbody>
-                <tr>
-                    <td style="    background-color: #5e5e5e;
-    vertical-align: top;
-    height: 60px;">
-                        <div></div>
-                    </td>
-                </tr>
+<!--                <tr>-->
+<!--                    <td style="    background-color: #5e5e5e;-->
+<!--    vertical-align: top;-->
+<!--    height: 60px;">-->
+<!--                        <div></div>-->
+<!--                    </td>-->
+<!--                </tr>-->
                 <tr>
                     <td style="background-color: black;vertical-align: top;
                 text-align: -webkit-center;">

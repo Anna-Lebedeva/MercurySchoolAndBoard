@@ -5,11 +5,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 <h1>Mercury School - инновационная школа математики
     <br><span>Уроки с преподавателем в онлайн-школе Mercury School</span>
 </h1>
-<p style="color: #0ea0ff; font-size: 38px;">Для учеников 5-11 классов</p>
+<p style="color: #0ea0ff; font-size: 38px;">Для школьников любого возраста</p>
 
 <div class="video_block">
     <video id="vid" width="100%" height="100%" autoplay muted loop>
-        <source src="/video/alla.mp4" type="video/mp4"/>
+        <source src="/video/demo.mp4" type="video/mp4"/>
     </video>
     <!-- отключает нажатия правой кнопки мыши на видео-->
     <script>

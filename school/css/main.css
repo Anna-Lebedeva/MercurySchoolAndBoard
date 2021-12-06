@@ -12,16 +12,75 @@ body {
     font-style: normal;
 }
 
-#shapochka {
+#header_row {
     position: fixed;
     background-color: black;
-    width: 100%;
     top: 0;
+    width: 100%;
     height: 60px;
+    z-index: 10;
+}
+#books-list-placeholder {
+    font-size: 26px;
+    margin-top: 200px;
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+}
+
+#shapochka {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 10;
+}
+
+#messages {
+    margin-left: 150px;
+    color: #ffe5e5;
+    font-size: larger;
+    background: black;
+}
+
+.class-button {
+    background: none;
+    border: none;
+    font: inherit;
+    padding-left: 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+.books-page-table {
+    display: flex;
+    height: 800px;
+    /*margin: 0 10px;*/
+}
+
+#books-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: 2px;
+}
+
+.book-image {
+    border: 4px outset #ffffff29;
+}
+
+.book-image, .book-image-ph {
+    width: 211px;
+}
+
+.book-image-preview {
+    height: 100%;
+    width: 100%;
+}
+
+.pass-set {
+    width: 210px;
+    margin-bottom: 10px;
 }
 
 .links, .buttons {

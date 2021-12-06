@@ -9,6 +9,8 @@ class clNav
     var $profile_id = 0;
     var $name = '';
     var $board_url = '';
+    var $flag_uchitel = 0;
+    var $profile_uchitel_id = 0;
 
     public function __construct($clMysql)
     {
@@ -27,7 +29,10 @@ class clNav
         if (isset($_SESSION['profile'])) {
             $this->profile_id = $_SESSION['profile']['id'];
             $this->name = $_SESSION['profile']['name'];
-            $this->board_url = $_SESSION['profile']['board_url'];
+            $this->flag_uchitel = $_SESSION['profile']['flag_uchitel'];
+            $this->profile_uchitel_id = $_SESSION['profile']['profile_uchitel_id'];
+            //print_r( $_SESSION['profile']);
+          //  exit;
         }
     }
 }

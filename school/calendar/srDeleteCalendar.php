@@ -10,10 +10,10 @@ $clMysql->ConnectedDefaultBase();
 
 
 
-$id_row = $_POST['id'];
+$id = $_POST['id'];
 
 
-$clMysql->query("DELETE FROM  raspisanie   WHERE id=$id")
+$clMysql->query("DELETE FROM  raspisanie   WHERE id=$id");
 
 
 

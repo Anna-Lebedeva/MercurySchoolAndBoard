@@ -2,6 +2,9 @@
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 ?>
+<div style="text-align: left;">
+
+
 
     <div style="font-size:36px;text-align: left; color: #a695ff">Здравствуйте, <?= $clNav->name ?></div>
 
@@ -11,7 +14,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div style="text-align: left; color: #ffd580; font-size: 26px">Для лучшего подбора заполни анкету: "Мои идеальный учитель:</div>
 
 <br>
-    <div style="text-align: left; color: #f8cd7d; font-size: 26px">Строгость</div>
+    <div style="text-align: left; color: #f8cd7d; font-size: 26px;display: inline-block;
+    position: absolute;    margin-top: -8px;">Строгость</div>
 
 <style>
     /*the container must be positioned relative:*/
@@ -67,14 +71,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         background-color: rgba(0, 0, 0, 0.1);
     }
 </style>
-</head>
 
-<body>
 
 <!--<h2>Custom Select</h2>-->
 
 <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
-<div class="custom-select" style="width:200px;">
+<div class="custom-select" style="width:200px;    display: inline-block;
+    left: 70%;
+    margin: -100px;">
     <select>
         <option value="0">Выбери строгость</option>
         <option value="1">Добрый:)</option>
@@ -83,11 +87,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     </select>
 </div>
 
+<div style="height: 50px;"></div>
 
+<div style="text-align: left; color: #ffc880; font-size: 26px;display: inline-block;
+    position: absolute;    margin-top: -8px;">Задает домашнее задание</div>
 
-<div style="text-align: left; color: #ffc880; font-size: 26px">Задает домашнее задание</div>
-
-<div class="custom-select" style="width:200px;">
+<div class="custom-select" style="width:200px;display: inline-block;
+    left: 70%;
+    margin: -100px;">
     <select>
         <option value="0">Задает д/з</option>
         <option value="1">Не задаёт</option>
@@ -96,10 +103,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     </select>
 </div>
 
+    <div style="height: 50px;"></div>
+<div style="text-align: left; color: #ffcd84; font-size: 26px;display: inline-block;
+    position: absolute;    margin-top: -8px;">Возраст</div>
 
-<div style="text-align: left; color: #ffcd84; font-size: 26px">Возраст</div>
-
-<div class="custom-select" style="width:200px;">
+<div class="custom-select" style="width:200px;display: inline-block;
+    left: 70%;
+    margin: -100px;">
     <select>
         <option value="0">Возраст</option>
         <option value="1">Молодой</option>
@@ -180,8 +190,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     }
     /*if the user clicks anywhere outside the select box,
     then close all select boxes:*/
-    document.addEventListener("click", closeAllSelect);</script>
+    document.addEventListener("click", closeAllSelect);
 
+
+</script>
+
+</div>
 
 
 <?php

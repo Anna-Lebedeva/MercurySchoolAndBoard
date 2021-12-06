@@ -150,7 +150,7 @@ h2 {
 }
 
 .price-card {
-    display: grid;
+    display: inline-block;
     justify-items: center;
     align-items: center;
     align-content: stretch;

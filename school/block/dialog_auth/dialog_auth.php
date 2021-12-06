@@ -1,8 +1,8 @@
-<div class="modal-form modal-form-auth dialog dialog_auth" id="dialog_auth" style="display: none;height: auto;">
+<div class="modal-form dialog dialog_auth" id="dialog_auth" style="display: none;height: auto;">
     <div style="border-bottom: 1px solid #908bd9;">
 
         <div style="float: right; margin-top: 15px; margin-right: 15px;cursor: pointer;"
-             onclick="document.getElementById('dialog_auth').style.display='none';document.getElementById('fade').style.display='none';">
+             onclick="document.getElementById('dialog_auth').style.display='none';$('#fade').css({display:'none'});">
             <img src="/img/close.png" alt="x"></div>
 
         <div class="h1" style="
@@ -44,7 +44,7 @@
     padding-bottom: 30px;
     font-size: 15px;
     color: #CDCCEE;">
-            <input type="password" style="width: 257px;" class="auth_pass" onkeydown="key_pass(this)"
+            <input id="auth_pass" type="password" style="width: 257px;" class="auth_pass" onkeydown="key_pass(this)"
                    placeholder="Пароль" size="38">
         </div>
     </div>
@@ -69,6 +69,11 @@
 
 <script type="text/javascript">
     function key_pass(t) {
+        // let real_value = t.value
+        // let auth_pass = $('#auth_pass');
+        // auth_pass.val('*'.repeat(t.value.length));
+        // setTimeout(() => { auth_pass.val('*'.repeat(t.value.length)) }, 500);
+        // console.log(real_value);
     }
 
     function show_form_reg() {

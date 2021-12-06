@@ -13,18 +13,10 @@ if ($r->num_rows == 0)
 else
 {
     ?><h1>Придумайте пароль для входа</h1>
-    <div>
-        <label>
-            <input type="password" class="pass1"  placeholder="Придумайте новый пароль">
-        </label>
-    </div>
-    <div>
-        <label>
-            <input type="password" class="pass2" placeholder="Повторите пароль">
-        </label>
-    </div>
-    <div>
-        <button onclick="save_pass()">Сохранить</button>
+    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <input type="password" class="pass1 pass-set" placeholder="Придумайте новый пароль">
+        <input type="password" class="pass2 pass-set" placeholder="Повторите пароль">
+        <button id="save_but" class="bt_yellow submit-btn-auth auth-but" onclick="save_pass()">Сохранить</button>
     </div>
     <script type="text/javascript">
         function save_pass() {
@@ -52,7 +44,10 @@ else
 
             if (h === 'ok')
             {
-                location.href = '/';
+                $('#save_but').attr("disabled", true);
+                $('#messages').delay(3000).html('Пароль успешно установлен').slideDown(400).delay(500).slideUp(400, function () {
+                    location.href = '/';
+                });
             }
             })
 

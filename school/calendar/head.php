@@ -27,6 +27,8 @@
     //     });
     //
     // }
+
+    let flag_right = 0;
     document.addEventListener('DOMContentLoaded', function () {
         let calendarEl = document.getElementById('calendar');
         const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -84,8 +86,8 @@
                 let date_urok = info.dateStr;
                 $('.dialog_calendar input:eq(1)').val(date + " " + time);
                 $('.dialog_calendar input:eq(1)').val(date + " " + time);
-                $('.dialog_calendar').css({display: 'block'});
 
+                show_dialog_calendar();
 
                 $("#dialog-lesson").dialog("open");
                 $("#id_time_start").val(info.dateStr).hide(); //для компьютера, нужно скрыть
@@ -112,8 +114,8 @@
 
                 let date_urok = info.dateStr;
                 $('.input_date').val(date + " " + time);
-                $('.dialog_calendar').css({display: 'block'});
 
+                show_dialog_calendar();
 
                 $('.id_row').val(info.event.extendedProps.id_row)
 
@@ -128,7 +130,7 @@
                 $('.delete-btn').show();
             }, eventAllow: function (dropInfo, draggedEvent) {
                 console.log(JSON.stringify(dropInfo));
-                console.log('dateStart -' + dropInfo.start);
+
 
 
 //время надо добавить---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -181,14 +183,23 @@
 
 
 
-                let res = startYear+""+startMonth+""+startDay+""+(startHours)+""+startMinutes+""+startSeconds;
+                let res = startYear+""+startMonth+""+startDay+""+(startHours)+""+startMinutes;
 
 
-                let res2 =endYear+""+endMonth+""+endDay+""+(endHours)+""+endMinutes+""+endSeconds;
+                let res2 =endYear+""+endMonth+""+endDay+""+(endHours)+""+endMinutes;
 
 
                console.log("d="+res);
                console.log("d2="+res2);
+               //let d = new Date(endYear,endMonth,endDay);
+               //console.log(JSON.stringify(d));
+             //  console.log("data:"+d.getDay()+ " day="+endDay);
+
+                //console.log(d);
+               if (flag_right == 0)
+               {flag_right = 1;
+               //  ..  $('.fc-next-button').click();
+               }
 
                 return res >= res2;
 
@@ -236,10 +247,20 @@
             ],
             events: [
                 <?php
+                if (intval($clNav->flag_uchitel) == 1)  //это учитель
+                {
 
+
+                    $r2 =      $clMysql->query("SELECT * FROM raspisanie WHERE  profile_uchitel_id='$clNav->profile_id'");
+
+                }
+                else
+                {
+                    $r2 =      $clMysql->query("SELECT * FROM raspisanie WHERE profile_id='$clNav->profile_id' and profile_uchitel_id='$clNav->profile_uchitel_id'");
+
+                }
                 $i = 0;
-                $r2 =      $clMysql->query("SELECT * FROM raspisanie WHERE profile_id='$clNav->profile_id'");
-                while ($row2 = $r2->fetch_array())
+                 while ($row2 = $r2->fetch_array())
                 {$i++;
                 ?>
 
@@ -314,6 +335,12 @@
                 "ui-dialog-buttonpane": "modal-footer"
             },
         });
+
+        function show_dialog_calendar() {
+
+            $('.dialog_calendar').css({display: 'block'}).fadeIn(200);
+            $('.fade').fadeIn(200);
+        }
 
     })
 
