@@ -60,7 +60,7 @@
     font-size: 15px;
     color: #ebf0ff;">
 
-        <input type="text" class="input_name" style="width: 260px" placeholder="Имя" size="38" value="Миша">
+        <input type="text" class="input_name" style="width: 260px" placeholder="Имя" size="38">
     </div>
 
 
@@ -76,7 +76,7 @@
     padding-bottom: 9px;
     font-size: 15px;
     color: #ebf0ff;">
-        <input type="text" style="width: 260px" class="input_phone" placeholder="Телефон" size="38" value="9998887766">
+        <input type="tel" style="width: 260px" class="input_phone" placeholder="Телефон" size="38">
     </div>
     <div class="result_reg_phone" style="display: none;">
     </div>
@@ -88,13 +88,12 @@
     color: #FFF;">Адрес электронной почты
     </div>
     <div style="border-bottom: 1px solid #908bd9;">
-        <div class="h1" style="padding-top: 4px;
+        <div id="stroshka-with-email" class="h1" style="padding-top: 4px;
     padding-left: 21px;
-    padding-bottom: 29px;
+    padding-bottom: 10px;
     font-size: 15px;
     color: #ebf0ff;">
-            <input type="text" style="width: 260px" class="input_email" placeholder="Адрес электронной почты" size="38"
-                   value="pyth0n@inbox.ru">
+            <input type="text" style="width: 260px" class="input_email" placeholder="Адрес электронной почты" size="38">
         </div>
         <div class="result_reg_email" style="display: none;">
         </div>
@@ -133,6 +132,7 @@
                     $('.input_phone').animate({backgroundColor: 'white'}, 500, function () {
                     });
                 });
+                $('#stroshka-with-email').css({paddingBottom: '2px'})
                 $('.result_reg_phone').css({display: 'block'}).html(
                     '<div class="form-error">Этот номер телефона уже зарегистрирован</div>')
             }
@@ -141,6 +141,7 @@
                     $('.input_email').animate({backgroundColor: 'white'}, 500, function () {
                     });
                 });
+                $('#stroshka-with-email').css({paddingBottom: '2px'})
                 $('.result_reg_email').css({display: 'block'}).html(
                     '<div class="form-error">Неверный формат электронной почты</div>')
             }
@@ -149,6 +150,7 @@
                     $('.input_email').animate({backgroundColor: 'white'}, 500, function () {
                     });
                 });
+                $('#stroshka-with-email').css({paddingBottom: 0})
                 $('.result_reg_email').css({display: 'block'}).html(
                     '<div class="form-error">Этот адрес электронной почты уже зарегистрирован</div>')
             }
@@ -162,6 +164,7 @@
                     $('.input_email').animate({backgroundColor: 'white'}, 500, function () {
                     });
                 });
+                $('#stroshka-with-email').css({paddingBottom: 0})
                 $('.result_reg_email').css({display: 'block'}).html(
                     '<div class="form-error" h1>Ошибка при отправке письма</h1></div>')
             }

@@ -27,7 +27,7 @@
     padding-bottom: 1px;
     font-size: 15px;
     color: #ebf0ff;">
-        <input type="text" style="width: 257px;" class="auth_email" placeholder="Ваш email" size="38" autofocus value="pyth0n@inbox.ru">
+        <input type="text" style="width: 257px;" class="auth_email" placeholder="Ваш email" size="38" autofocus >
     </div>
 
     <div class="h1" style="padding-top: 15px;

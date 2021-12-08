@@ -19,6 +19,11 @@ if (strpos($email, '@') === false) {
     exit();
 }
 
+if (strpos($email, '@') === false) {
+    echo json_encode(array('error_email'));
+    exit();
+}
+
 $errors = [];
 
 // todo убрать в один запрос

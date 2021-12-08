@@ -26,7 +26,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
         });
     </script>
 </div>
-
+<div id="about-school">
 <div class="info-card-block-left">
     <span class="info-card-title-left">Удобная платформа</span>
     <div class="info-card">Занятия проходят на интерактивной платформе "PlanetBoard"</div>
@@ -50,35 +50,37 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
         Учителя имеют соответствующий опыт, регулярно проходят повышение квалификации</div>
 </div>
 
+</div>
 
 
-<div style="margin-top: 110px;">
+<div id="our-prices" style="margin-top: 110px;">
     <h2 style="text-align:  center; font-weight: 700; font-size: 32px; text-transform: uppercase; -webkit-text-stroke: 1px #004fff;">
         Сколько стоит?</h2>
 </div>
 
-<div class="prices">
-
-    <div class="price-card">
+<table class="prices">
+    <tr>
+    <td id="first-card" class="price-card">
         <img src="/img/price/big%20love.png" class="price-card-img" alt="">
         <h3 class="card-title" style="color: rgb(248,0,0);">8 уроков</h3>
         <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько подходит формат</p>
         <p class="card-text price">730 р. за урок</p>
-    </div>
-    <div class="price-card">
+    </td>
+    <td id="second-card" class="price-card">
         <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
         <h3 class="card-title" style="color: rgb(64,0,248);">16 уроков</h3>
         <p class="card-text">Подтянуться по школьной программе</p>
         <p class="card-text price">690 р. за урок</p>
-    </div>
-    <div class="price-card">
+    </td>
+    <td id="third-card" class="price-card">
         <img src="/img/price/brain64.png" class="price-card-img" alt="">
         <h3 class="card-title" style="color: rgb(255,37,155);">64 урока</h3>
         <p class="card-text">Стать гуру математики, удивить родителей и учителей</p>
         <p class="card-text price">600 р. за урок</p>
-    </div>
+    </td>
+    </tr>
 
-</div>
+</table>
 
 
 <div style="max-width: 900px;margin-top: 50px;" class="banner_mobile">
