@@ -53,10 +53,10 @@
         <?php } ?>
 
 
-
+        <span id="contacts">
         <button class="button"><img src="/img/footer/phone3.png"  alt="" style="width: 32px;display: inline-block;"><span style="display: inline-block; vertical-align: top;
     margin-top: 8px;">+7 (999) 020-50-74</span></button>
-
+        </span>
 
 
     </td></tr>

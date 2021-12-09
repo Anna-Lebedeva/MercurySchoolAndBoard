@@ -4,7 +4,7 @@
         <div class="logo"><a href="/"><img class="img-logo" src="/img/logo_no_bg.png" alt="logo"></a></div>
         <div class="links">
             <?php if ($clNav->flag_auth == 0) { ?>
-                <a href="/contact" class="colorLink">Контакты</a>
+                <a href="#contacts" class="colorLink">Контакты</a>
                 <a href="#about-school" class="colorLink">О нас</a>
                 <a href="#our-prices" class="colorLink">Цены</a>
                 <button class="mobile_menu">=</button>

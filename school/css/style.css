@@ -277,7 +277,7 @@ h2 {
 
 }
 
-@media (min-width: 910px) and (max-width: 1250px) {
+@media (min-width: 955px) and (max-width: 1250px) {
     #first-card {
         margin-top: -31px;
         margin-left: 102px;
@@ -291,7 +291,7 @@ h2 {
     }
 }
 
-@media (min-width: 910px) {
+@media (min-width: 955px) {
     .prices {
         display: table;
         min-height: 250px
