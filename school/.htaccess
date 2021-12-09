@@ -1,1 +1,8 @@
 php_value display_errors 1
+
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} =off
+
+RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
