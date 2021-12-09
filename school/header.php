@@ -23,6 +23,8 @@ $clNav = new clNav($clMysql);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная страница</title>
+    <meta lang="ru" content="Более 2000 товаров в наличии. Доставка по всей России. Низкие цены. Работаем более 6 лет! Всегда есть диски новые CD/DVD, футляры, фотобумага, клавиатуры, мышки и многое другое." name="description">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">

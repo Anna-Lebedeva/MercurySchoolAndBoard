@@ -1,0 +1,10 @@
+User-agent: *
+Host: https://mercuryshool.ru
+Crawl-delay: 1
+Sitemap: https://mercuryshool.ru/sitemap.xml
+Allow:/
+Disallow: /admin/
+Disallow: /calendar/
+Disallow: /board/
+Disallow: /finance/
+
