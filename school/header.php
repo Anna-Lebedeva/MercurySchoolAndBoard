@@ -36,7 +36,7 @@ $clNav = new clNav($clMysql);
     <script type="text/javascript" src='/js/calendar.js'></script>
     <script type="text/javascript" src='/js/calendar-locales-all.js'></script>
     <script type="text/javascript" src='/js/main.js'></script>
-
+    <meta name='wmail-verification' content='7fc725a85fd175254b5f98ba8cd5f643' />
     <link rel="stylesheet" href="/css/jquery.bxslider.css">
     <script src="/js/jquery.bxslider.min.js"></script>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/calendar/head.php'; ?>
