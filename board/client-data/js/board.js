@@ -428,7 +428,7 @@ function updateDocumentTitle() {
 			if (Date.now() - lastStateUpdate > 5000 && hash !== window.location.hash) {
 				// window.history.pushState({}, "", hash);
 				lastStateUpdate = Date.now();
-				http.open('POST', 'https://localhost', true);
+				http.open('POST', 'https://mercuryschool.ru', true);
 				http.send(`coordinates=${hash}`);
 				console.log('1111', hash);
 			} else {
