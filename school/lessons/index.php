@@ -90,23 +90,126 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
                         } else {
 //---------------------------------------------------------------------------------------------------------------------------------
                             if (intval($_GET['book'] == 1)) {
-                                $url = "/pdfs/1/1Aleksandrova1ch.pdf";
-                            }
-                            if (intval($_GET['book'] == 2)) {
-                                $url = "/pdfs/1/1Aleksandrova2ch.pdf";
-                            }
-                            if (intval($_GET['book'] == 3)) {
                                 $url = "/pdfs/1/1Dlyatehktolybitmatematiky.pdf";
                             }
+                            if (intval($_GET['book'] == 2)) {
+                                $url = "/pdfs/1/1Aleksandrova1ch.pdf";
+                            }
+                            if (intval($_GET['book'] == 3)) {
+                                $url = "/pdfs/1/1Aleksandrova2ch.pdf";
+                            }
+
                             if (intval($_GET['book'] == 4)) {
                                 $url = "/pdfs/2/2Bogdanovich_M.V.,_Lishenko_G.P.pdf";
                             }
                             if (intval($_GET['book'] == 5)) {
                                 $url = "/pdfs/2/2Chebotarevskaya_T.M.,_Nikolaeva_V.V._1part.pdf";
                             }
-                            if (intval($_GET['book'] == 5)) {
+                            if (intval($_GET['book'] == 6)) {
                                 $url = "/pdfs/2/2Chebotarevskaya_T.M.,_Nikolaeva_V.V._2_part.pdf";
                             }
+
+
+
+//--------------------3класс
+
+                            if (intval($_GET['book'] == 7)) {
+                                $url = "/pdfs/3/3Gahramanova_N_et_al.pdf";
+                            }
+                            if (intval($_GET['book'] == 8)) {
+                                $url = "/pdfs/3/3Bogdanovich_MV_Lishenko_G.P.pdf";
+                            }
+
+//--------------------4класс
+                            if (intval($_GET['book'] == 9)) {
+                                $url = "/pdfs/4/4Bogdanovich_M.V._Lishenko_G.P.pdf";
+                            }
+                            if (intval($_GET['book'] == 10)) {
+                                $url = "/pdfs/4/4Gahramanova_N_et_alii.pdf";
+                            }
+//--------------------5класс
+                            if (intval($_GET['book'] == 11)) {
+                                $url = "/pdfs/5/5. Дорофеев.pdf";
+                            }
+                            if (intval($_GET['book'] == 12)) {
+                                $url = "/pdfs/5/5. Виленкин Н.Я., Жохов В.И. и др..pdf";
+
+                            }
+                            if (intval($_GET['book'] == 13)) {
+                                $url = "/pdfs/5/5. Мерзляк А.Г., Полонский В.Б., Якир М.С..pdf";
+                            }
+//--------------------6класс
+                            if (intval($_GET['book'] == 14)) {
+                                $url = "/pdfs/6/6. Виленкин.pdf";
+                            }
+//--------------------7класс
+                            if (intval($_GET['book'] == 15)) {
+                                $url = "/pdfs/7/7-9. Атанасян_Геометрия.pdf";
+                            }
+                            if (intval($_GET['book'] == 16)) {
+                                $url = "/pdfs/7/7.Колягин_Ткачева_алгебра.pdf";
+                            }
+//--------------------8класс
+                            if (intval($_GET['book'] == 17)) {
+                                $url = "/pdfs/8/8. Алгебра, Мерзляк, Полонский, Якир.pdf";
+                            }
+                            if (intval($_GET['book'] == 18)) {
+                                $url = "/pdfs/8/7-9. Атанасян_Геометрия.pdf";
+                            }
+//--------------------9класс
+                            if (intval($_GET['book'] == 19)) {
+                                $url = "/pdfs/9/9. Алгебра, Колягин, Ткачева.pdf";
+                            }
+                            if (intval($_GET['book'] == 20)) {
+                                $url = "/pdfs/9/9. Макарычев Ю.Н., Миндюк Н.Г. и др..pdf";
+                            }
+                            if (intval($_GET['book'] == 21)) {
+                                $url = "/pdfs/9/7-9. Атанасян_Геометрия.pdf";
+                            }
+//--------------------10класс
+                            if (intval($_GET['book'] == 22)) {
+                                $url = "/pdfs/10/10-11. Алгебра Алимов.pdf";
+                            }
+                            if (intval($_GET['book'] == 23)) {
+                                $url = "/pdfs/10/Атанасян_Геометрия_10-11.pdf";
+                            }
+//--------------------11класс
+                            if (intval($_GET['book'] == 24)) {
+                                $url = "/pdfs/11/10-11. Алгебра Алимов.pdf";
+                            }
+                            if (intval($_GET['book'] == 25)) {
+                                $url = "/pdfs/11/Атанасян_Геометрия_10-11.pdf";
+                            }
+//--------------------OGE
+                            if (intval($_GET['book'] == 26)) {
+                                $url = "/pdfs/OGE/ОГЭ 2019. Математика. Задания с кратким ответом.pdf";
+                            }
+                            if (intval($_GET['book'] == 27)) {
+                                $url = "/pdfs/OGE/ОГЭ 2021 Математика. Сборник заданий..pdf";
+                            }
+                            if (intval($_GET['book'] == 28)) {
+                                $url = "/pdfs/OGE/ОГЭ 2021 Математика. 40 тренировочных вариантов.pdf";
+                            }
+                            if (intval($_GET['book'] == 29)) {
+                                $url = "/pdfs/OGE/ОГЭ 2022 Математика. Типовые экзаменационные задания. 36 вариантов - Под. ред. Ященко И.В..pdf";
+                            }
+//--------------------EGE
+                            if (intval($_GET['book'] == 30)) {
+                                $url = "/pdfs/EGE/МА-11 ЕГЭ 2022 ДЕМО_базовый.pdf";
+                            }
+                            if (intval($_GET['book'] == 31)) {
+                                $url = "/pdfs/EGE/МА-11 ЕГЭ 2022 ДЕМО_проф.pdf";
+                            }
+//                            if (intval($_GET['book'] == 32)) {
+//                                $url = "/pdfs/EGE/2Chebotarevskaya_T.M.,_Nikolaeva_V.V._2_part.pdf";
+//                            }
+//                            if (intval($_GET['book'] == 33)) {
+//                                $url = "/pdfs/EGE/2Chebotarevskaya_T.M.,_Nikolaeva_V.V._2_part.pdf";
+//                            }
+//                            if (intval($_GET['book'] == 34)) {
+//                                $url = "/pdfs/EGE/2Chebotarevskaya_T.M.,_Nikolaeva_V.V._2_part.pdf";
+//                            }
+
 
 
                             ?>
