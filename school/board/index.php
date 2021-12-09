@@ -1,3 +1,5 @@
+<!-- не используется -->
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -13,13 +15,6 @@
 <body>
 
 <canvas id="blackboard" width="300" height="500"></canvas>
-
-
-
-
-
-
-
 
 <script type="text/javascript">
     var canvas, ctx;
@@ -38,7 +33,6 @@
         //   canvas.addEventListener("touchstart", canvas_touchdown);
         //   canvas.addEventListener("touchmove", canvas_touchmove);
         //  canvas.addEventListener("touchend ", canvas_touchup);
-
 
         ctx = canvas.getContext("2d");
         ctx.lineWidth = 2;

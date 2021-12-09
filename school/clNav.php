@@ -28,6 +28,7 @@ class clNav
 
         if (isset($_SESSION['profile'])) {
             $this->profile_id = $_SESSION['profile']['id'];
+            $this->board_url = $_SESSION['profile']['board_url'];
             $this->name = $_SESSION['profile']['name'];
             $this->flag_uchitel = $_SESSION['profile']['flag_uchitel'];
             $this->profile_uchitel_id = $_SESSION['profile']['profile_uchitel_id'];

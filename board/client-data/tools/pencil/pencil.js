@@ -223,7 +223,7 @@
 				restoreDrawingSize();
 			}
 		},
-		"mouseCursor": "url('tools/pencil/cursor.svg'), crosshair",
+		"mouseCursor": "url('tools/pencil/pencilhd_106116.svg') 0 30, crosshair",
 		"icon": "tools/pencil/pencil.svg",
 		"stylesheet": "tools/pencil/pencil.css",
 	};

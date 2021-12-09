@@ -1,8 +1,13 @@
-var app = require("http").createServer(handler),
+const fs = require('fs');
+const options = {
+  key: fs.readFileSync("./server/ssl/server.key"),
+  cert: fs.readFileSync("./server/ssl/server.crt")
+}
+
+const app = require("https").createServer(options, handler),
   sockets = require("./sockets.js"),
   {log, monitorFunction} = require("./log.js"),
   path = require("path"),
-  fs = require("fs"),
   crypto = require("crypto"),
   serveStatic = require("serve-static"),
   createSVG = require("./createSVG.js"),
@@ -11,7 +16,7 @@ var app = require("http").createServer(handler),
   polyfillLibrary = require("polyfill-library"),
   check_output_directory = require("./check_output_directory.js");
 
-var MIN_NODE_VERSION = 10.0;
+const MIN_NODE_VERSION = 10.0;
 
 if (parseFloat(process.versions.node) < MIN_NODE_VERSION) {
   console.warn(
@@ -30,10 +35,10 @@ sockets.start(app);
 app.listen(config.PORT, config.HOST);
 log("server started", { port: config.PORT });
 
-var CSP =
-  "default-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:";
+const CSP =
+    "default-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:";
 
-var fileserver = serveStatic(config.WEBROOT, {
+const fileserver = serveStatic(config.WEBROOT, {
   maxAge: 2 * 3600 * 1000,
   setHeaders: function (res) {
     res.setHeader("X-UA-Compatible", "IE=Edge");
@@ -41,7 +46,8 @@ var fileserver = serveStatic(config.WEBROOT, {
   },
 });
 
-var errorPage = fs.readFileSync(path.join(config.WEBROOT, "error.html"));
+const errorPage = fs.readFileSync(path.join(config.WEBROOT, "error.html"));
+
 function serveError(request, response) {
   return function (err) {
     log("error", { error: err && err.toString(), url: request.url });

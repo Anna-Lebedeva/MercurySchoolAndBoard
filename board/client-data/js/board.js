@@ -23,8 +23,7 @@
  *
  * @licend
  */
-
-var Tools = {};
+const Tools = {};
 
 Tools.i18n = (function i18n() {
 	var translations = JSON.parse(document.getElementById("translations").text);
@@ -45,7 +44,7 @@ Tools.drawingArea = Tools.svg.getElementById("drawingArea");
 //Initialization
 Tools.curTool = null;
 Tools.drawingEvent = true;
-Tools.showMarker = true;
+Tools.showMarker = false;
 Tools.showOtherCursors = true;
 Tools.showMyCursor = true;
 
@@ -415,21 +414,25 @@ function updateDocumentTitle() {
 
 (function () {
 	// Scroll and hash handling
-	var scrollTimeout, lastStateUpdate = Date.now();
+	let scrollTimeout, lastStateUpdate = Date.now();
+	const http = new XMLHttpRequest();
 
 	window.addEventListener("scroll", function onScroll() {
-		var scale = Tools.getScale();
-		var x = document.documentElement.scrollLeft / scale,
-			y = document.documentElement.scrollTop / scale;
+		const scale = Tools.getScale();
+		const x = document.documentElement.scrollLeft / scale,
+			  y = document.documentElement.scrollTop / scale;
 
 		clearTimeout(scrollTimeout);
 		scrollTimeout = setTimeout(function updateHistory() {
-			var hash = '#' + (x | 0) + ',' + (y | 0) + ',' + Tools.getScale().toFixed(1);
+			const hash = '#' + (x | 0) + ',' + (y | 0) + ',' + Tools.getScale().toFixed(1);
 			if (Date.now() - lastStateUpdate > 5000 && hash !== window.location.hash) {
-				window.history.pushState({}, "", hash);
+				// window.history.pushState({}, "", hash);
 				lastStateUpdate = Date.now();
+				http.open('POST', 'https://localhost', true);
+				http.send(`coordinates=${hash}`);
+				console.log('1111', hash);
 			} else {
-				window.history.replaceState({}, "", hash);
+				// window.history.replaceState({}, "", hash);
 			}
 		}, 100);
 	});

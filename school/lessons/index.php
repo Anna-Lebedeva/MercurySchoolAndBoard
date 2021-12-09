@@ -70,23 +70,22 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
     <table style="width: 100%; height: 100%;">
         <tr>
             <td style="padding: 0;">
-                <input type="range" class="form-range" id="customRange1" min="0" max="10000"
-                       value="7000">
+                <input type="range" class="form-range" id="customRange1" min="0" max="10000">
                 <div class="drag-container" id="drag-container">
                     <div class="panel-one" id="drag-left">
-                        <iframe id="lesson-board" onload="load_frame(this)"
+                        <iframe id="lesson-board" onload="load_frame(this)" onclick="changeBoardUrl()"
                                 src="http://<?= $clNav->board_link ?>/boards/<?= $clNav->board_url ?>"></iframe>
                     </div>
                     <div class="dragbar" id="dragbar"></div>
                     <div class="panel-two" id="drag-right">
-                        <?
+                        <?php
 
 
                         $url = "";
                         if (!array_key_exists("book", $_GET)) {
                             ?>
                             <div style="background-color: ">Не выбран учебник :(<br><a href="/books">выбрать учебник</a>
-                            </div><?
+                            </div><?php
                         } else {
 //---------------------------------------------------------------------------------------------------------------------------------
                             if (intval($_GET['book'] == 1)) {
@@ -108,7 +107,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
                             if (intval($_GET['book'] == 6)) {
                                 $url = "/pdfs/2/2Chebotarevskaya_T.M.,_Nikolaeva_V.V._2_part.pdf";
                             }
-
 
 
 //--------------------3класс
@@ -209,17 +207,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
 //                            if (intval($_GET['book'] == 34)) {
 //                                $url = "/pdfs/EGE/2Chebotarevskaya_T.M.,_Nikolaeva_V.V._2_part.pdf";
 //                            }
-
-
-
                             ?>
-                        <iframe id="lesson-book" src="<?= $url ?>" width="100%" height="100%">
-                            </iframe><?
-                        }
-                        //---------------------------------------------------------------------------------------------------------------------------------
 
-                        ?>
-
+                            <iframe id="lesson-book" src="<?= $url ?>" width="100%" height="100%"></iframe>
+                            <!-- src="<?= $url ?>#page=5" - прыгнуть на 5-ую страницу -->
+                        <?php } ?>
                     </div>
             </td>
         </tr>
@@ -229,6 +221,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
 
     <script type="text/javascript">
         function load_frame(t) {
+            console.log(localStorage.getItem('board-coords'));
+
             let iframeLink = document.createElement('link');
 
             iframeLink.href = '/css/reset_iframe.css'; // css файл для iFrame
@@ -240,21 +234,22 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
 
         }
 
-
-    </script>
-
-    <script>
         //слайдер
         window.onload = init;
 
         function init() {
             const left = document.getElementById('drag-left');
             const bar = document.getElementById('dragbar');
-            const rng = document.getElementById('customRange1')
+            const rng = document.getElementById('customRange1');
+
+            let stored_val = localStorage.getItem('drag_rng_value');
+            rng.value = stored_val ? stored_val : 7000;
+            left.style.width = (rng.value / 10000 * window.innerWidth) + 'px';
 
             const drag = (e) => {
                 document.selection ? document.selection.empty() : window.getSelection().removeAllRanges();
                 left.style.width = (e.pageX - bar.offsetWidth / 2) + 'px';
+                localStorage.setItem('drag_rng_value', '' + (e.pageX / window.innerWidth * 10000))
             }
             rng.addEventListener('mousedown', () => {
                 document.addEventListener('mousemove', drag);
@@ -270,6 +265,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
             if (chosen_book && !params['book']) {
                 document.location.href = `/lessons?book=${chosen_book}`;
             }
+        }
+
+        function changeBoardUrl() {
+
         }
     </script>
 
@@ -447,7 +446,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
         }
     </style>
 
-<? //
+<?php //
 //include $_SERVER['DOCUMENT_ROOT']. '/footer.php';
 //
 //?>
