@@ -9,7 +9,6 @@ services:
     restart: always
     links:
       - mysql
-      - board
     ports:
       - "80:80"
       - "443:443"
@@ -49,7 +48,6 @@ services:
   board:
     volumes:
       - /opt/app/server-data:/opt/app/server-data
-      - board:/opt/app
     ports:
       - '5001:443'
     build:
@@ -61,7 +59,7 @@ services:
         condition: on-failure
     environment:
       - PORT=443
+      - SCHOOL_SERVER=${SCHOOL_SERVER}
 
 volumes:
   mysql:
-  board:

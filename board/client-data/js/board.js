@@ -425,10 +425,11 @@ function updateDocumentTitle() {
 		clearTimeout(scrollTimeout);
 		scrollTimeout = setTimeout(function updateHistory() {
 			const hash = '#' + (x | 0) + ',' + (y | 0) + ',' + Tools.getScale().toFixed(1);
+			console.log(Tools.server_config);
 			if (Date.now() - lastStateUpdate > 5000 && hash !== window.location.hash) {
 				// window.history.pushState({}, "", hash);
 				lastStateUpdate = Date.now();
-				http.open('POST', 'https://mercuryschool.ru', true);
+				http.open('POST', Tools.server_config.SCHOOL_SERVER, true);
 				http.send(`coordinates=${hash}`);
 				console.log('1111', hash);
 			} else {
