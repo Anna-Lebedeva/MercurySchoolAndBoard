@@ -64,13 +64,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
         <img src="/img/price/big%20love.png" class="price-card-img" alt="">
         <h3 class="card-title" style="color: rgb(248,0,0);">8 уроков</h3>
         <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько подходит формат</p>
-        <p class="card-text price">730 р. за урок</p>
+        <p class="card-text price">750 р. за урок</p>
     </td>
     <td id="second-card" class="price-card">
         <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
         <h3 class="card-title" style="color: rgb(64,0,248);">16 уроков</h3>
         <p class="card-text">Подтянуться по школьной программе</p>
-        <p class="card-text price">690 р. за урок</p>
+        <p class="card-text price">700 р. за урок</p>
     </td>
     <td id="third-card" class="price-card">
         <img src="/img/price/brain64.png" class="price-card-img" alt="">
@@ -91,7 +91,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
                 <p class="card-title" style="color: rgb(248,0,0);">8 уроков</p>
                 <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько
                     подходит формат</p>
-                <p class="card-text price">730 р. за урок</p>
+                <p class="card-text price">750 р. за урок</p>
             </div>
         </div>
 
@@ -100,7 +100,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
                 <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
                 <p class="card-title" style="color: rgb(64,0,248);">16 уроков</p>
                 <p class="card-text">Подтянуться по школьной программе</p>
-                <p class="card-text price">690 р. за урок</p>
+                <p class="card-text price">700 р. за урок</p>
             </div>
         </div>
         <div class="banner_pic3 table_banner">
