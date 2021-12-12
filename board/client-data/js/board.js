@@ -114,6 +114,46 @@ function saveBoardNametoLocalStorage() {
 // Refresh recent boards list on each page show
 window.addEventListener("pageshow", saveBoardNametoLocalStorage);
 
+// вставка
+let mouse_x = 0,
+ 	mouse_y = 0;
+window.addEventListener("mousemove", function (e) {
+	mouse_x = e.clientX;
+	mouse_y = e.clientY;
+});
+window.addEventListener("paste", function (e){
+	const items = e.clipboardData.items;
+	for (let i = 0; i < items.length; i++) {
+        if (items[i].type.indexOf("image") === 0) {	 // картинки
+            // Tools.drawingArea.appendChild(shape);
+			// Tools.createSVGElement("image", {
+			// 	href: "media/" + icon,
+			// 	width: width, height: height
+			// });
+			console.log(items[i].getAsFile());
+			// items[i].getAsFile().
+        } else if (items[i].type.indexOf("text") === 0 && mouse_x > 0 && mouse_y > 0) {  // текст
+			items[i].getAsString((text_value) => {
+				let old_tool = Tools.curTool;
+				Tools.change("Text");
+				const text_data = {
+					"type": "new",
+					"id": Tools.generateUID("t"),
+					"color": "#ff851b",
+					"size": 18,
+					"opacity": 1,
+					"x": mouse_x,
+					"y": mouse_y,
+					"txt": text_value,
+				}
+				createTextField(text_data);
+				Tools.send(text_data, Tools.curTool.name);
+				Tools.change(old_tool.name);
+			})
+		}
+    }
+}, false);
+
 Tools.HTML = {
 	template: new Minitpl("#tools > .tool"),
 	addShortcut: function addShortcut(key, callback) {
@@ -408,41 +448,40 @@ window.addEventListener("focus", function () {
 function updateDocumentTitle() {
 	document.title =
 		(Tools.unreadMessagesCount ? '(' + Tools.unreadMessagesCount + ') ' : '') +
-		Tools.boardName +
-		" | WBO";
+		Tools.boardName;
 }
 
 (function () {
 	// Scroll and hash handling
 	let scrollTimeout, lastStateUpdate = Date.now();
-	const http = new XMLHttpRequest();
 
 	window.addEventListener("scroll", function onScroll() {
 		const scale = Tools.getScale();
 		const x = document.documentElement.scrollLeft / scale,
 			  y = document.documentElement.scrollTop / scale;
 
+		const hash = '#' + (x | 0) + ',' + (y | 0) + ',' + scale.toFixed(1);
+		localStorage.setItem('board-coords', hash);
+
 		clearTimeout(scrollTimeout);
-		scrollTimeout = setTimeout(function updateHistory() {
-			const hash = '#' + (x | 0) + ',' + (y | 0) + ',' + Tools.getScale().toFixed(1);
-			console.log(Tools.server_config);
-			if (Date.now() - lastStateUpdate > 5000 && hash !== window.location.hash) {
-				// window.history.pushState({}, "", hash);
-				lastStateUpdate = Date.now();
-				http.open('POST', Tools.server_config.SCHOOL_SERVER, true);
-				http.send(`coordinates=${hash}`);
-				console.log('1111', hash);
-			} else {
-				// window.history.replaceState({}, "", hash);
-			}
-		}, 100);
+		// scrollTimeout = setTimeout(function updateHistory() {
+
+		// 	if (Date.now() - lastStateUpdate > 5000 && hash !== window.location.hash) {
+		// 		// window.history.pushState({}, "", hash);
+		// 		lastStateUpdate = Date.now();
+		// 	} else {
+		// 		// window.history.replaceState({}, "", hash);
+		// 	}
+		// }, 100);
 	});
 
 	function setScrollFromHash() {
-		var coords = window.location.hash.slice(1).split(',');
-		var x = coords[0] | 0;
-		var y = coords[1] | 0;
-		var scale = parseFloat(coords[2]);
+		const boardCoords = localStorage.getItem('board-coords');
+		let coords = boardCoords ? boardCoords : window.location.hash;
+		coords = coords.slice(1).split(',');
+		const x = coords[0] | 0;
+		const y = coords[1] | 0;
+		const scale = parseFloat(coords[2]);
 		resizeCanvas({ x: x, y: y });
 		Tools.setScale(scale);
 		window.scrollTo(x * scale, y * scale);

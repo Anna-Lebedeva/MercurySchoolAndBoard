@@ -24,6 +24,19 @@
  * @licend
  */
 
+function createTextField(fieldData) {
+	var elem = Tools.createSVGElement("text");
+	elem.id = fieldData.id;
+	elem.setAttribute("x", fieldData.x);
+	elem.setAttribute("y", fieldData.y);
+	elem.setAttribute("font-size", fieldData.size);
+	elem.setAttribute("fill", fieldData.color);
+	elem.setAttribute("opacity", Math.max(0.1, Math.min(1, fieldData.opacity)) || 1);
+	if (fieldData.txt) elem.textContent = fieldData.txt;
+	Tools.drawingArea.appendChild(elem);
+	return elem;
+}
+
 (function () { //Code isolation
 	var board = Tools.board;
 
@@ -187,19 +200,6 @@
 
 	function updateText(textField, text) {
 		textField.textContent = text;
-	}
-
-	function createTextField(fieldData) {
-		var elem = Tools.createSVGElement("text");
-		elem.id = fieldData.id;
-		elem.setAttribute("x", fieldData.x);
-		elem.setAttribute("y", fieldData.y);
-		elem.setAttribute("font-size", fieldData.size);
-		elem.setAttribute("fill", fieldData.color);
-		elem.setAttribute("opacity", Math.max(0.1, Math.min(1, fieldData.opacity)) || 1);
-		if (fieldData.txt) elem.textContent = fieldData.txt;
-		Tools.drawingArea.appendChild(elem);
-		return elem;
 	}
 
 	Tools.add({ //The new tool

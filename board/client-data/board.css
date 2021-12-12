@@ -6,7 +6,7 @@ html, body, svg {
 }
 
 body {
-	overflow: hidden !important;
+	overflow: hidden !important;  /* бегунок */
 }
 
 #canvas {

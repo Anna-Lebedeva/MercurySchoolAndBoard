@@ -74,7 +74,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
                 <div class="drag-container" id="drag-container">
                     <div class="panel-one" id="drag-left">
                         <iframe id="lesson-board" onload="load_frame(this)" onclick="changeBoardUrl()"
-                                src="http://<?= $clNav->board_link ?>/boards/<?= $clNav->board_url ?>"></iframe>
+                                src="<?= $clNav->board_link ?>/boards/<?= $clNav->board_url ?>"></iframe>
                     </div>
                     <div class="dragbar" id="dragbar"></div>
                     <div class="panel-two" id="drag-right">
@@ -221,8 +221,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
 
     <script type="text/javascript">
         function load_frame(t) {
-            console.log(localStorage.getItem('board-coords'));
-
             let iframeLink = document.createElement('link');
 
             iframeLink.href = '/css/reset_iframe.css'; // css файл для iFrame

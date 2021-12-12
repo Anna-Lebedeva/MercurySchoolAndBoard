@@ -3,7 +3,7 @@
 
 class clNav
 {
-    var $board_link = 'localhost:5001';
+    var $board_link;
     var $flag_auth = 0;
     var $flag_teacher = 0;
     var $profile_id = 0;
@@ -14,6 +14,8 @@ class clNav
 
     public function __construct($clMysql)
     {
+        $this->board_link = getenv("SCHOOL_SERVER") . ":5001";
+
         if (isset($_SESSION['auth_user'])) {
             if ($_SESSION['auth_user'] == 1) {
                 $this->flag_auth = 1;
