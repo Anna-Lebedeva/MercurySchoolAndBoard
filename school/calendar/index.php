@@ -148,8 +148,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
         function save_calendar() {
 
             let uchenic_id = $('.select_uchenik option:selected').val();
-
-
             let id_row = $('.id_row').val();
             let tema = $('.input_tema').val();
             let data = $('.input_date').val();
@@ -161,9 +159,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
                 'tema': tema,
                 'data': data
             }), function (h) {
-
-                console.log(h);
-                // ..  location.reload();
+                // console.log(h);
             });
 
             $('.dialog_calendar').css({display:'none'});

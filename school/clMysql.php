@@ -1,6 +1,6 @@
 <?php
 
-//include $_SERVER['DOCUMENT_ROOT'] . '/ChromePhp.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/ChromePhp.php';
 
 //Класс для управления Mysql базой данных.
 class clMysql

@@ -65,7 +65,7 @@
 
             eventOverlap: false,
             dateClick: function (info) {  //создание нового урока
-                console.log(" " + JSON.stringify(info))
+                // console.log(" " + JSON.stringify(info))
 
                 let s = info.date.toLocaleString();
 
@@ -129,7 +129,7 @@
                 $("#id_subject").val(info.event.title).trigger('focus');
                 $('.delete-btn').show();
             }, eventAllow: function (dropInfo, draggedEvent) {
-                console.log(JSON.stringify(dropInfo));
+                // console.log(JSON.stringify(dropInfo));
 
 
 
@@ -189,8 +189,8 @@
                 let res2 =endYear+""+endMonth+""+endDay+""+(endHours)+""+endMinutes;
 
 
-               console.log("d="+res);
-               console.log("d2="+res2);
+               // console.log("d="+res);
+               // console.log("d2="+res2);
                //let d = new Date(endYear,endMonth,endDay);
                //console.log(JSON.stringify(d));
              //  console.log("data:"+d.getDay()+ " day="+endDay);
