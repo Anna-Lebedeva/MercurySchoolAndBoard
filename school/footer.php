@@ -8,16 +8,16 @@
             .button {
                 background-color: #000000;
                 color: white;
-                padding: 7px 20px;
+                padding: 12px 17px;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
                 font-size: 16px;
-                margin: 14px 144px;
+                margin: 6px 0;
                 cursor: pointer;
                 border-radius: 50px;
-                border: 2px solid rgb(56 131 202); /* Green */
-                -webkit-transition-duration: 0.4s; /* Safari */
+                border: 2px solid rgb(56 131 202);
+                -webkit-transition-duration: 0.4s;
                 transition-duration: 0.4s;
             }
             /*.button:hover {*/
@@ -36,7 +36,6 @@
                 text-decoration: none;
                 display: inline-block;
                 font-size: 16px;
-                margin: 4px -93px;
                 cursor: pointer;
                 padding-right: 10px;
             }
@@ -44,19 +43,18 @@
 
         <h2></h2>
 
-
-        <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
-
-
-        <a href="#" class="button-up"><img src="/img/footer/up.png"  alt="" style="width: 36px;display: inline-block;"><span style="display: inline-block;
-    vertical-align: top; margin-top: 8px;">Подняться наверх</span></a>
-        <?php } ?>
-
-
-        <span id="contacts">
-        <button class="button"><img src="/img/footer/phone3.png"  alt="" style="width: 32px;display: inline-block;"><span style="display: inline-block; vertical-align: top;
-    margin-top: 8px;">+7 (999) 020-50-74</span></button>
-        </span>
+        <div id="contacts">
+            <?php if($_SERVER['REQUEST_URI'] == '/') { ?>
+            <span id="naverh">
+                <a href="#" class="button-up"><img src="/img/footer/up.png"  alt="" style="width: 36px;display: inline-block;"><span style="display: inline-block;
+        vertical-align: top; margin-top: 8px;">Подняться наверх</span></a>
+            </span>
+            <?php } ?>
+            <span id="phone">
+                <button class="button"><img src="/img/footer/phone3.png"  alt="" style="width: 32px;display: inline-block;"><span style="display: inline-block; vertical-align: top;
+        margin-top: 8px;">+7 (999) 020-50-74</span></button>
+            </span>
+        </div>
 
 
     </td></tr>

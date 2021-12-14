@@ -1,29 +1,48 @@
-<div class="header_row">
-    <div id="shapochka">
+<table class="header_row">
+    <tbody id="shapochka">
+    <tr>
+        <?php if ($clNav->flag_auth == 1) { ?>
+        <td id="burger" onclick="show_mobile_menu()">
+            <div class="bar topBar"></div>
+            <div class="bar btmBar"></div>
+        </td>
+        <td class="td-menu" style="vertical-align: top;">
+            <ul class="menu">
+                    <li class="menu-item"><a href="/profile">Личный кабинет</a></li>
+                    <li class="menu-item"><a href="/calendar">Расписание</a></li>
+                    <li class="menu-item"><a href="/lessons">Урок</a></li>
+                    <li class="menu-item"><a href="/finance">Финансы</a></li>
+                    <li class="menu-item"><a href="/books">Учебники</a></li>
+                <?php if ($clNav->flag_teacher == 1) { ?>
+                    <li class="menu-item"><a href="/admin">Управление</a></li>
+                <?php } ?>
+            </ul>
+        </td>
+        <?php } ?>
 
-        <div class="logo"><a href="/"><img class="img-logo" src="/img/logo_no_bg.png" alt="logo"></a></div>
-        <div class="links">
+        <td class="logo"><a href="/"><img class="img-logo" src="/img/logo_no_bg.png" alt="logo"></a></td>
+
             <?php if ($clNav->flag_auth == 0) { ?>
+        <td class="links links-glavnaya">
                 <a href="#contacts" class="colorLink">Контакты</a>
                 <a href="#about-school" class="colorLink">О нас</a>
                 <a href="#our-prices" class="colorLink">Цены</a>
-                <button class="mobile_menu">=</button>
             <?php } else { ?>
+        <td class="links links-profile">
                 <a href="/profile" class="colorLink">Личный кабинет</a>
                 <a href="/calendar" class="colorLink">Расписание</a>
-                <a id="lessons-href" href="/lessons" class="colorLink">Урок</a>
+                <a href="/lessons" id="lessons-href" class="colorLink">Урок</a>
                 <a href="/finance" class="colorLink">Финансы</a>
                 <a href="/books" class="colorLink">Учебники</a>
-                <?php if ($clNav->flag_teacher == 1) { ?>
-                    <a style="color: red;" href="/admin" class="colorLink">Управление</a>
-                <?php } ?>
-                <button class="mobile_menu">=</button>
             <?php } ?>
-        </div>
+            <?php if ($clNav->flag_teacher == 1) { ?>
+                <a style="color: red;" href="/admin" class="colorLink">Управление</a>
+            <?php } ?>
+        </td>
 
-        <div class="buttons">
+        <td class="buttons">
             <?php if ($clNav->flag_auth == 0) { ?>
-                <button class="bt bt_yellow" onclick="show_dialog_reg();" style="margin-right: 10px;">
+                <button class="bt bt_yellow" onclick="show_dialog_reg();">
                     Начать бесплатно
                 </button>
                 <button class="bt bt_gray" onclick="show_dialog_auth();">
@@ -34,12 +53,14 @@
                     Выйти
                 </button>
             <?php } ?>
-        </div>
+        </td>
+    </tr>
+    <tr>
+        <td id="messages"></td>
+    </tr>
+    </tbody>
 
-    </div>
-
-    <div id="messages"></div>
-</div>
+</table>
 
 <script type="text/javascript">
     $('.modal-form').keypress(function (e) {
@@ -74,6 +95,14 @@
     const chosen_book = localStorage.getItem('chosen_book')
     if (chosen_book) {
         $('#lessons-href').attr('href', `/lessons?book=${chosen_book}`);
+    }
+
+    function show_mobile_menu() {
+        // const header = document.querySelector('.header_row');
+        // header.classList.toggle('menu-opened');
+        $('.header_row').toggleClass('menu-opened').slideDown(300);
+        // $('.body-table').toggle(0).slideDown(0);
+        $('.body-table').toggle(0);
     }
 
 </script>

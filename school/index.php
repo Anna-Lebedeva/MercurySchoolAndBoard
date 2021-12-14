@@ -9,7 +9,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 
 <div class="video_block">
     <video id="vid" width="100%" height="100%" autoplay muted loop>
-        <source src="/video/demo.mp4" type="video/mp4"/>
+        <source src="/video/videooschool2.mp4" type="video/mp4"/>
     </video>
     <!-- отключает нажатия правой кнопки мыши на видео-->
     <script>
@@ -54,8 +54,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 
 
 <div id="our-prices" style="margin-top: 110px;">
-    <h2 style="text-align:  center; font-weight: 700; font-size: 32px; text-transform: uppercase; -webkit-text-stroke: 1px #004fff;">
-        Сколько стоит?</h2>
+    <h2 style="text-align:  center; font-weight: 700; font-size: 32px; color: #ff9ec8; text-transform: uppercase; -webkit-text-stroke: 1px #004fff;">
+        Пакеты занятий</h2>
 </div>
 
 <table class="prices">
@@ -64,19 +64,19 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
         <img src="/img/price/big%20love.png" class="price-card-img" alt="">
         <h3 class="card-title" style="color: rgb(248,0,0);">8 уроков</h3>
         <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько подходит формат</p>
-        <p class="card-text price">750 р. за урок</p>
+<!--        <p class="card-text price">750 р. за урок</p>-->
     </td>
     <td id="second-card" class="price-card">
         <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
         <h3 class="card-title" style="color: rgb(64,0,248);">16 уроков</h3>
         <p class="card-text">Подтянуться по школьной программе</p>
-        <p class="card-text price">700 р. за урок</p>
+<!--        <p class="card-text price">700 р. за урок</p>-->
     </td>
     <td id="third-card" class="price-card">
         <img src="/img/price/brain64.png" class="price-card-img" alt="">
         <h3 class="card-title" style="color: rgb(255,37,155);">64 урока</h3>
         <p class="card-text">Стать гуру математики, удивить родителей и учителей</p>
-        <p class="card-text price">600 р. за урок</p>
+<!--        <p class="card-text price">600 р. за урок</p>-->
     </td>
     </tr>
 
@@ -91,7 +91,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
                 <p class="card-title" style="color: rgb(248,0,0);">8 уроков</p>
                 <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько
                     подходит формат</p>
-                <p class="card-text price">750 р. за урок</p>
+<!--                <p class="card-text price">750 р. за урок</p>-->
             </div>
         </div>
 
@@ -100,7 +100,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
                 <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
                 <p class="card-title" style="color: rgb(64,0,248);">16 уроков</p>
                 <p class="card-text">Подтянуться по школьной программе</p>
-                <p class="card-text price">700 р. за урок</p>
+<!--                <p class="card-text price">700 р. за урок</p>-->
             </div>
         </div>
         <div class="banner_pic3 table_banner">
@@ -108,7 +108,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
                 <img src="/img/price/brain64.png" class="price-card-img" alt="">
                 <p class="card-title" style="color: rgb(255,37,155);">64 урока</p>
                 <p class="card-text">Стать гуру математики, удивить родителей и учителей</p>
-                <p class="card-text price">600 р. за урок</p>
+<!--                <p class="card-text price">600 р. за урок</p>-->
             </div>
         </div>
 

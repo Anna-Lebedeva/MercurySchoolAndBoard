@@ -36,7 +36,6 @@ $clNav = new clNav($clMysql);
 
     <link rel="stylesheet" href="/css/style.css?v=<?= rand(1, 1000000) ?>" type="text/css">
     <link rel="stylesheet" href="/css/reset.css?v=<?= rand(1, 1000000) ?>" type="text/css">
-    <link rel="stylesheet" href="/css/main.css" type="text/css">
     <link rel="stylesheet" href="/css/Stratos%20LC%20Web.css" type="text/css">
     <link href='/css/calendar.css' rel='stylesheet'/>
     <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -64,11 +63,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/dialog_reg/dialog_reg.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключаем верхнее меню
 ?>
 
-<table style="height: 100%; width: 100%;" cellpadding="0" cellspacing="0">
+<table class="body-table" style="height: 100%; width: 100%;" cellpadding="0" cellspacing="0">
     <tbody>
     <tr>
         <td>
-            <div class="fullscreen-bg">
+            <div id="fullscreen-bg">
                 <video loop="" muted="" autoplay="" poster="img/zvezdnoe.jpg" class="fullscreen-bg__video">
                     <source src="https://storage.googleapis.com/ms_storage/starVideo.mp4" type="video/mp4">
                 </video>

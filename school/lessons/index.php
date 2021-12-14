@@ -23,7 +23,6 @@ $clNav = new clNav($clMysql);
         <title>Главная страница</title>
         <link rel="stylesheet" href="/css/style.css?v=<?= rand(1, 1000000) ?>" type="text/css">
         <link rel="stylesheet" href="/css/reset.css?v=<?= rand(1, 1000000) ?>" type="text/css">
-        <link rel="stylesheet" href="/css/main.css" type="text/css">
         <link rel="stylesheet" href="/css/Stratos%20LC%20Web.css" type="text/css">
         <link href='/css/calendar.css' rel='stylesheet'/>
         <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -73,14 +72,12 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
                 <input type="range" class="form-range" id="customRange1" min="0" max="10000">
                 <div class="drag-container" id="drag-container">
                     <div class="panel-one" id="drag-left">
-                        <iframe id="lesson-board" onload="load_frame(this)" onclick="changeBoardUrl()"
+                        <iframe id="lesson-board" onload="load_frame(this)"
                                 src="<?= $clNav->board_link ?>/boards/<?= $clNav->board_url ?>"></iframe>
                     </div>
                     <div class="dragbar" id="dragbar"></div>
                     <div class="panel-two" id="drag-right">
                         <?php
-
-
                         $url = "";
                         if (!array_key_exists("book", $_GET)) {
                             ?>
@@ -264,10 +261,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
                 document.location.href = `/lessons?book=${chosen_book}`;
             }
         }
-
-        function changeBoardUrl() {
-
-        }
     </script>
 
     <style>
@@ -285,6 +278,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
             display: flex;
             flex: 1 1 auto;
             height: 100%;
+            margin-top: -10px;
         }
 
         .dragbar {
@@ -326,7 +320,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
             border: 0;
             -webkit-appearance: none;
             margin: 0;
-            padding: 0 0 4px 0;
+            padding: 0;
             background-color: transparent !important;
             position: absolute;
             top: 36px;
