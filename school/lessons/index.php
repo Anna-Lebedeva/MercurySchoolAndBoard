@@ -268,6 +268,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
             overflow: hidden;
         }
 
+        .header_row {
+            margin-bottom: -15px;
+        }
+
         #lesson-board {
             width: 100%;
             height: 100%;
@@ -322,7 +326,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
             margin: 0;
             padding: 0;
             background-color: transparent !important;
-            position: absolute;
+            position: sticky;
             top: 36px;
             z-index: 100;
         }

@@ -154,18 +154,14 @@ h2 {
 
 .price-card {
     display: inline-block;
-    justify-items: center;
-    align-items: center;
-    align-content: stretch;
-    justify-content: center;
-    width: 250px;
+    width: 240px;
     background-color: #e7dcfb;
     margin: 5px;
     padding: 8px;
     color: #6e00ff;
     border: 4px outset #99afff;
-    height: 250px;
-    text-align: center
+    height: 188px;
+    text-align: center;
 }
 
 /*!!!!!!!!!! от ? до 320*/
@@ -246,31 +242,12 @@ h2 {
         margin-right: 120px;
     }
 
-    .info-card-title-left, .info-card-title-right {
-        font-size: 28px;
-        font-family: cursive;
-        color: white;
-        -webkit-text-stroke: 1px #004fff;
-    }
-
     .info-card-title-left {
-        margin-left: 180px;
+        margin-left: 114px;
     }
 
     .info-card-title-right {
-        margin-right: 180px;
-    }
-
-    .info-card {
-        min-height: 80px;
-        font-size: 24px;
-        background: linear-gradient(#9A77F1, #b59af8);
-        margin: 5px;
-        padding: 8px;
-        color: #F9FF93;
-        border: 4px outset #464d66;
-        text-align: center;
-        font-weight: 300;
+        margin-right: 114px;
     }
 
     /*.bt_yellow{*/
@@ -278,27 +255,27 @@ h2 {
     /*}*/
 }
 
-.info-card-block-left, .info-card-block-right, .info-card-title-left, .info-card-title-right {
-    margin: 0;
-}
+/*.info-card-block-left, .info-card-block-right, .info-card-title-left, .info-card-title-right {*/
+/*    margin: 0;*/
+/*}*/
 
 .info-card-title-left, .info-card-title-right {
     font-size: 28px;
-    font-family: cursive;
-    color: white;
-    -webkit-text-stroke: 1px #004fff;
+    /* font-family: cursive; */
+    color: #9f7bf8;
+    -webkit-text-stroke: 1px #9f7bf9;
 }
 
 .info-card {
-    min-height: 80px;
+    /* min-height: 80px; */
     font-size: 24px;
-    background: linear-gradient(#9A77F1, #b59af8);
+    background: linear-gradient(#fdffef, #fdf0e3);
     margin: 5px;
     padding: 8px;
-    color: #F9FF93;
+    color: #000000;
     border: 4px outset #464d66;
     text-align: center;
-    font-weight: 300;
+    font-weight: 500;
 
 }
 
@@ -312,9 +289,6 @@ h2 {
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.price-card-td {
 }
 
 #burger, .menu {
@@ -534,7 +508,6 @@ body {
 @media (min-width: 955px) and (max-width: 1250px) {
     #first-card {
         margin-top: -31px;
-        margin-left: 102px;
     }
 
     #second-card {
@@ -542,7 +515,6 @@ body {
     }
 
     #third-card {
-        margin-left: 250px;
         margin-top: 5px;
     }
 }
@@ -551,19 +523,14 @@ body {
     #naverh, #phone {
         width: auto;
     }
-    #naverh {
-
-    }
-    #phone {
-
-    }
 }
 
 /*!!!!!!!!!!!! от 950*/
 @media (min-width: 955px) {
     .prices {
         display: table;
-        min-height: 250px
+        min-height: 250px;
+        max-width: 560px;
     }
 
     .img-logo {
@@ -596,6 +563,9 @@ body {
     .colorLink {
         padding: 8px 16px;
     }
+    .price-card {
+        /*margin: 0;*/
+    }
 }
 
 /*!!!!!!!!!!! до 1052*/
@@ -610,7 +580,7 @@ body {
 
     .logo, .buttons {
         /*width: 355px;*/
-        /*vertical-align: top;*/
+        vertical-align: top;
         /*padding-top: 10px;*/
     }
 
@@ -628,7 +598,7 @@ body {
         position: relative;
         display: inline-block;
         width: 20px;
-        height: 50px;
+        height: 30px;
         margin-left: 15px;
         cursor: pointer;
         transform: rotate(0deg);

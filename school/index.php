@@ -27,28 +27,30 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
     </script>
 </div>
 <div id="about-school">
-<div class="info-card-block-left">
-    <span class="info-card-title-left">Удобная платформа</span>
-    <div class="info-card">Занятия проходят на интерактивной платформе "PlanetBoard"</div>
-</div>
+    <div class="info-card-block-left">
+        <span class="info-card-title-left">Удобная платформа</span>
+        <div class="info-card">Занятия проходят на интерактивной платформе "PlanetBoard"</div>
+    </div>
 
-<div class="info-card-block-right">
-    <span class="info-card-title-right">Персональная программа</span>
-    <div class="info-card">Подготавливается на основе потребностей для каждого ученика</div>
-</div>
+    <div class="info-card-block-right">
+        <span class="info-card-title-right">Персональная программа</span>
+        <div class="info-card">Подготавливается на основе потребностей для каждого ученика</div>
+    </div>
 
-<div class="info-card-block-left">
-    <span class="info-card-title-left">Гибкое расписание</span>
-    <div class="info-card">Ученику доступен любой временной промежуток рабочего времени учителя.
-        Занятия можно легко и удобно переносить</div>
-</div>
+    <div class="info-card-block-left">
+        <span class="info-card-title-left">Гибкое расписание</span>
+        <div class="info-card">Ученику доступен любой временной промежуток рабочего времени учителя.
+            Занятия можно легко и удобно переносить
+        </div>
+    </div>
 
-<div class="info-card-block-right">
-    <span class="info-card-title-right">Квалифицированные педагоги</span>
-    <div class="info-card">Отбор кандидатов проходит в несколько этапов:
-        устное собеседование, тестирование, проведение пробных занятий.
-        Учителя имеют соответствующий опыт, регулярно проходят повышение квалификации</div>
-</div>
+    <div class="info-card-block-right">
+        <span class="info-card-title-right">Квалифицированные педагоги</span>
+        <div class="info-card">Отбор кандидатов проходит в несколько этапов:
+            устное собеседование, тестирование, проведение пробных занятий.
+            Учителя имеют соответствующий опыт, регулярно проходят повышение квалификации
+        </div>
+    </div>
 
 </div>
 
@@ -60,24 +62,26 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 
 <table class="prices">
     <tr>
-    <td id="first-card" class="price-card">
-        <img src="/img/price/big%20love.png" class="price-card-img" alt="">
-        <h3 class="card-title" style="color: rgb(248,0,0);">8 уроков</h3>
-        <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько подходит формат</p>
-<!--        <p class="card-text price">750 р. за урок</p>-->
-    </td>
-    <td id="second-card" class="price-card">
-        <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
-        <h3 class="card-title" style="color: rgb(64,0,248);">16 уроков</h3>
-        <p class="card-text">Подтянуться по школьной программе</p>
-<!--        <p class="card-text price">700 р. за урок</p>-->
-    </td>
-    <td id="third-card" class="price-card">
-        <img src="/img/price/brain64.png" class="price-card-img" alt="">
-        <h3 class="card-title" style="color: rgb(255,37,155);">64 урока</h3>
-        <p class="card-text">Стать гуру математики, удивить родителей и учителей</p>
-<!--        <p class="card-text price">600 р. за урок</p>-->
-    </td>
+        <td style="text-align: center;">
+            <div id="first-card" class="price-card">
+                <img src="/img/price/big%20love.png" class="price-card-img" alt="">
+                <h3 class="card-title" style="color: rgb(248,0,0);">8 уроков</h3>
+                <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько подходит
+                    формат</p>
+                <!--        <p class="card-text price">750 р. за урок</p>-->
+            </div>
+            <div id="second-card" class="price-card">
+                <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
+                <h3 class="card-title" style="color: rgb(64,0,248);">16 уроков</h3>
+                <p class="card-text">Подтянуться по школьной программе</p>
+                <!--        <p class="card-text price">700 р. за урок</p>-->
+            </div>
+            <div id="third-card" class="price-card">
+                <img src="/img/price/brain64.png" class="price-card-img" alt="">
+                <h3 class="card-title" style="color: rgb(255,37,155);">64 урока</h3>
+                <p class="card-text">Стать гуру математики, удивить родителей и учителей</p>
+                <!--        <p class="card-text price">600 р. за урок</p>-->
+            </div>
     </tr>
 
 </table>
@@ -91,7 +95,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
                 <p class="card-title" style="color: rgb(248,0,0);">8 уроков</p>
                 <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько
                     подходит формат</p>
-<!--                <p class="card-text price">750 р. за урок</p>-->
+                <!--                <p class="card-text price">750 р. за урок</p>-->
             </div>
         </div>
 
@@ -100,7 +104,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
                 <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
                 <p class="card-title" style="color: rgb(64,0,248);">16 уроков</p>
                 <p class="card-text">Подтянуться по школьной программе</p>
-<!--                <p class="card-text price">700 р. за урок</p>-->
+                <!--                <p class="card-text price">700 р. за урок</p>-->
             </div>
         </div>
         <div class="banner_pic3 table_banner">
@@ -108,7 +112,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
                 <img src="/img/price/brain64.png" class="price-card-img" alt="">
                 <p class="card-title" style="color: rgb(255,37,155);">64 урока</p>
                 <p class="card-text">Стать гуру математики, удивить родителей и учителей</p>
-<!--                <p class="card-text price">600 р. за урок</p>-->
+                <!--                <p class="card-text price">600 р. за урок</p>-->
             </div>
         </div>
 
