@@ -14,7 +14,7 @@ iframe body {
 }
 
 .main_td, .video_block {
-    width: 100px;
+    width: 900px;
     height: 100%;
 }
 
@@ -206,9 +206,9 @@ h2 {
 }
 /*!!!!!!!!!!!!!!!! от 400 до 408*/
 @media (min-width: 400px) and (max-width: 417px){
-    .main_td
+    .main_td, .video_block
     {
-        min-width: 350px;
+        width: 350px;
     }
     .bt {
         font-size: 10px !important;
@@ -216,9 +216,9 @@ h2 {
 }
 /*!!!!!!!!!!!!!!!! от 0 до 453*/
 @media (max-width: 453px) {
-    .main_td
+    .main_td, .video_block
     {
-        min-width: 400px;
+        width: 400px;
     }
     .links-glavnaya {
         display: none;
@@ -229,9 +229,9 @@ h2 {
 }
 /*!!!!!!!!!!!!!!!! от 0 до 635*/
 @media (max-width: 683px) {
-    .main_td
+    .main_td, .video_block
     {
-        min-width: 600px;
+        width: 600px;
     }
     .links-glavnaya {
         display: none;
@@ -241,9 +241,9 @@ h2 {
 /*!!!!!!!!!!!!!!!! от 700 до ??*/
 
 @media (min-width: 700px) {
-    .main_td
+    .main_td, .video_block
     {
-        min-width: 600px;
+        width: 600px;
     }
 
     .info-card-block-left, .info-card-block-right {
@@ -523,9 +523,9 @@ body {
 
 /*!!!!!!!!!!!! от 955 до 1250*/
 @media (min-width: 955px) and (max-width: 1250px) {
-    .main_td
+    .main_td, .video_block
     {
-        min-width: 900px;
+        width: 900px;
     }
 
     #first-card {
@@ -549,9 +549,9 @@ body {
 
 /*!!!!!!!!!!!! от 950*/
 @media (min-width: 955px) {
-   .main_td
+   .main_td, .video_block
    {
-       min-width: 900px;
+       width: 900px;
    }
 
     .prices {
