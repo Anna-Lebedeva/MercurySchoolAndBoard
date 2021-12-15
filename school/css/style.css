@@ -153,7 +153,6 @@ h2 {
 }
 
 .price-card {
-    display: inline-block;
     width: 240px;
     background-color: #e7dcfb;
     margin: 5px;
@@ -162,6 +161,7 @@ h2 {
     border: 4px outset #99afff;
     height: 188px;
     text-align: center;
+
 }
 
 /*!!!!!!!!!! от ? до 320*/

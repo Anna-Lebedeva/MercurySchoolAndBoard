@@ -63,25 +63,30 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 <table class="prices">
     <tr>
         <td style="text-align: center;">
+            <div style="display: table-cell; padding: 10px">
             <div id="first-card" class="price-card">
                 <img src="/img/price/big%20love.png" class="price-card-img" alt="">
                 <h3 class="card-title" style="color: rgb(248,0,0);">8 уроков</h3>
                 <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько подходит
                     формат</p>
                 <!--        <p class="card-text price">750 р. за урок</p>-->
-            </div>
+            </div> </div>
+            <div style="display: table-cell; padding: 10px">
             <div id="second-card" class="price-card">
                 <img src="/img/price/big%20cap.png" class="price-card-img" alt="">
                 <h3 class="card-title" style="color: rgb(64,0,248);">16 уроков</h3>
                 <p class="card-text">Подтянуться по школьной программе</p>
                 <!--        <p class="card-text price">700 р. за урок</p>-->
             </div>
+            </div>
+                <div style="display: table-cell; padding: 10px">
             <div id="third-card" class="price-card">
                 <img src="/img/price/brain64.png" class="price-card-img" alt="">
                 <h3 class="card-title" style="color: rgb(255,37,155);">64 урока</h3>
                 <p class="card-text">Стать гуру математики, удивить родителей и учителей</p>
                 <!--        <p class="card-text price">600 р. за урок</p>-->
             </div>
+                </div>
     </tr>
 
 </table>
