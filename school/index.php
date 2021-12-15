@@ -9,7 +9,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 
 <div class="video_block">
     <video id="vid" width="100%" height="100%" autoplay muted loop>
-        <source src="/video/videooschool2.mp4" type="video/mp4"/>
+        <source src="https://storage.googleapis.com/ms_storage/videooschool2.mp4" type="video/mp4"/>
     </video>
     <!-- отключает нажатия правой кнопки мыши на видео-->
     <script>

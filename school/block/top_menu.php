@@ -1,3 +1,5 @@
+
+
 <table class="header_row">
     <tbody id="shapochka">
     <tr>
@@ -29,7 +31,10 @@
                 <a href="#our-prices" class="colorLink">Цены</a>
             <?php } else { ?>
         <td class="links links-profile">
+
+
                 <a href="/profile" class="colorLink">Личный кабинет</a>
+
                 <a href="/calendar" class="colorLink">Расписание</a>
                 <a href="/lessons" id="lessons-href" class="colorLink">Урок</a>
                 <a href="/finance" class="colorLink">Финансы</a>

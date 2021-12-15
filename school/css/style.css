@@ -14,7 +14,7 @@ iframe body {
 }
 
 .main_td, .video_block {
-    width: 70vw;
+    width: 100px;
     height: 100%;
 }
 
@@ -206,12 +206,20 @@ h2 {
 }
 /*!!!!!!!!!!!!!!!! от 400 до 408*/
 @media (min-width: 400px) and (max-width: 417px){
+    .main_td
+    {
+        min-width: 350px;
+    }
     .bt {
         font-size: 10px !important;
     }
 }
 /*!!!!!!!!!!!!!!!! от 0 до 453*/
 @media (max-width: 453px) {
+    .main_td
+    {
+        min-width: 400px;
+    }
     .links-glavnaya {
         display: none;
     }
@@ -221,6 +229,10 @@ h2 {
 }
 /*!!!!!!!!!!!!!!!! от 0 до 635*/
 @media (max-width: 683px) {
+    .main_td
+    {
+        min-width: 600px;
+    }
     .links-glavnaya {
         display: none;
     }
@@ -229,6 +241,11 @@ h2 {
 /*!!!!!!!!!!!!!!!! от 700 до ??*/
 
 @media (min-width: 700px) {
+    .main_td
+    {
+        min-width: 600px;
+    }
+
     .info-card-block-left, .info-card-block-right {
         display: block;
         margin-top: 30px;
@@ -506,6 +523,11 @@ body {
 
 /*!!!!!!!!!!!! от 955 до 1250*/
 @media (min-width: 955px) and (max-width: 1250px) {
+    .main_td
+    {
+        min-width: 900px;
+    }
+
     #first-card {
         margin-top: -31px;
     }
@@ -527,6 +549,11 @@ body {
 
 /*!!!!!!!!!!!! от 950*/
 @media (min-width: 955px) {
+   .main_td
+   {
+       min-width: 900px;
+   }
+
     .prices {
         display: table;
         min-height: 250px;
