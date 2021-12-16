@@ -13,9 +13,11 @@ iframe body {
     overflow: hidden !important;
 }
 
+.main_td {
+    height: 100%;
+}
 .main_td, .video_block {
     width: 900px;
-    height: 100%;
 }
 
 .fade {

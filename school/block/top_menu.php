@@ -33,7 +33,7 @@
         <td class="links links-profile">
 
 
-                <a href="/profile" class="colorLink">Личный кабинет</a>
+                <a href="/profile" class="colorLink" style="margin-left: -760px">Личный кабинет</a>
 
                 <a href="/calendar" class="colorLink">Расписание</a>
                 <a href="/lessons" id="lessons-href" class="colorLink">Урок</a>
@@ -105,9 +105,9 @@
     function show_mobile_menu() {
         // const header = document.querySelector('.header_row');
         // header.classList.toggle('menu-opened');
-        $('.header_row').toggleClass('menu-opened').slideDown(300);
-        // $('.body-table').toggle(0).slideDown(0);
+        $('.header_row').toggleClass('menu-opened').slideDown(300);  // Не работает
         $('.body-table').toggle(0);
+        $('#drag-container').toggle(0);
     }
 
 </script>

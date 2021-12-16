@@ -107,8 +107,8 @@
 		curLineId = "";
 	}
 
-	var renderingLine = {};
 	function draw(data) {
+		let renderingLine = {};
 		Tools.drawingEvent = true;
 		switch (data.type) {
 			case "line":
@@ -131,9 +131,9 @@
 		}
 	}
 
-	var pathDataCache = {};
 	function getPathData(line) {
-		var pathData = pathDataCache[line.id];
+		const pathDataCache = {};
+		let pathData = pathDataCache[line.id];
 		if (!pathData) {
 			pathData = line.getPathData();
 			pathDataCache[line.id] = pathData;
@@ -141,10 +141,10 @@
 		return pathData;
 	}
 
-	var svg = Tools.svg;
+	let svg = Tools.svg;
 
 	function addPoint(line, x, y) {
-		var pts = getPathData(line);
+		let pts = getPathData(line);
 		pts = wboPencilPoint(pts, x, y);
 		line.setPathData(pts);
 	}
@@ -167,14 +167,14 @@
 
 	function restoreDrawingSize() {
 		whiteOutSize = Tools.getSize();
-		if (drawingSize != -1) {
+		if (drawingSize !== -1) {
 			Tools.setSize(drawingSize);
 		}
 	}
 
 	function restoreWhiteOutSize() {
 		drawingSize = Tools.getSize();
-		if (whiteOutSize != -1) {
+		if (whiteOutSize !== -1) {
 			Tools.setSize(whiteOutSize);
 		}
 	}
@@ -188,7 +188,7 @@
 		}
 	}
 
-	var pencilTool = {
+	const pencilTool = {
 		"name": "Pencil",
 		"shortcut": "p",
 		"listeners": {

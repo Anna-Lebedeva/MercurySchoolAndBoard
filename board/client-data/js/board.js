@@ -41,6 +41,8 @@ Tools.board = document.getElementById("board");
 Tools.svg = document.getElementById("canvas");
 Tools.drawingArea = Tools.svg.getElementById("drawingArea");
 
+const recentActionsKey = 'recentActions';
+
 //Initialization
 Tools.curTool = null;
 Tools.drawingEvent = true;
@@ -153,6 +155,58 @@ window.addEventListener("paste", function (e){
 		}
     }
 }, false);
+
+// отмена последних действий
+window.addEventListener('keydown', function(e) {
+	if (e.ctrlKey && (e.key.toLowerCase() === 'z' || e.key.toLowerCase() === 'я')) {
+		undoFunc();
+	}
+});
+
+undoFunc = function () {
+	let recentActions = JSON.parse(sessionStorage.getItem(recentActionsKey));
+	if (Array.isArray(recentActions)) {
+		const lastAction = recentActions.pop();
+		if (!lastAction) return;
+		const lastActionId = 'id' in lastAction ? lastAction.id : lastAction.parent;
+		const cancelledActions = recentActions.filter(function (x) {
+			if ('id' in x) {
+				return x.id === lastAction.id || x.id === lastAction.parent;
+			} else {
+				return x.parent === lastAction.id || x.parent === lastAction.parent;
+			}
+		});
+
+		if (lastAction.type === 'delete') {
+			let kids = cancelledActions.filter(x => x.type === 'child');
+			let parents = cancelledActions.filter(x => !kids.includes(x));
+			for (const action of parents) {
+				const tool = Tools.list[action.tool];
+				tool.draw(action, true);
+				Tools.send(action, tool.name);
+			}
+			for (const action of kids) {
+				const tool = Tools.list[action.tool];
+				if (kids.lastIndexOf(action) === 0) {
+					tool.listeners.release(action.x, action.y);
+				} else {
+					tool.listeners.move(action.x, action.y);
+					tool.draw(action);
+				}
+				Tools.send(action, tool.name);
+			}
+		} else {
+			Tools.drawingArea.removeChild(Tools.svg.getElementById(lastActionId));
+			Tools.send({
+				"type": "delete",
+				"id": lastActionId,
+				"tool": "Eraser"
+			}, "Eraser");
+			recentActions = recentActions.filter(x => !cancelledActions.includes(x));
+		}
+		sessionStorage.setItem(recentActionsKey, JSON.stringify(recentActions));
+	}
+}
 
 Tools.HTML = {
 	template: new Minitpl("#tools > .tool"),
@@ -367,14 +421,22 @@ Tools.removeToolListeners = function removeToolListeners(tool) {
 
 Tools.send = function (data, toolName) {
 	toolName = toolName || Tools.curTool.name;
-	var d = data;
+	const d = data;
 	d.tool = toolName;
 	Tools.applyHooks(Tools.messageHooks, d);
-	var message = {
+	const message = {
 		"board": Tools.boardName,
 		"data": d
 	};
 	Tools.socket.emit('broadcast', message);
+
+	// сохранение недавних действий
+	const obj = d;
+	if (obj) {
+		let recentActions = JSON.parse(sessionStorage.getItem(recentActionsKey)) || [];
+		recentActions.push(obj);
+		sessionStorage.setItem(recentActionsKey, JSON.stringify(recentActions));
+	}
 };
 
 Tools.drawAndSend = function (data, tool) {
