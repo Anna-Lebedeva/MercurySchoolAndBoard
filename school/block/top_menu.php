@@ -14,7 +14,7 @@
                     <li class="menu-item"><a href="/calendar">Расписание</a></li>
                     <li class="menu-item"><a href="/lessons">Урок</a></li>
                     <li class="menu-item"><a href="/finance">Финансы</a></li>
-                    <li class="menu-item"><a href="/books">Учебники</a></li>
+                    <li class="menu-item books-item"><a href="/books">Учебники</a></li>
                 <?php if ($clNav->flag_teacher == 1) { ?>
                     <li class="menu-item"><a href="/admin">Управление</a></li>
                 <?php } ?>
@@ -31,9 +31,7 @@
                 <a href="#our-prices" class="colorLink">Цены</a>
             <?php } else { ?>
         <td class="links links-profile">
-
-                <a href="/profile" class="colorLink" style="margin-left: -760px">Личный кабинет</a>
-
+                <a href="/profile" class="colorLink">Личный кабинет</a>
                 <a href="/calendar" class="colorLink">Расписание</a>
                 <a href="/lessons" id="lessons-href" class="colorLink">Урок</a>
                 <a href="/finance" class="colorLink">Финансы</a>

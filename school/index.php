@@ -56,7 +56,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 </div>
 
 
-<div id="our-prices" style="margin-top: 110px;">
+<div id="our-prices">
     <h2 class="pakety-zanyatiy">
         Пакеты занятий</h2>
 </div>

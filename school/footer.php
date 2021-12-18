@@ -1,5 +1,3 @@
-<div style="height: 100px;"></div>
-
 </td></tr>
 <tr><td style="background-color: #000000; vertical-align: top; text-align: center; color: rgb(56 131 202); height: 50px;">
 
@@ -29,9 +27,10 @@
             }
 
             .button-up {
-                background-color: rgba(74, 92, 112, 0.88);
+                background-color: rgb(74 92 112);
                 border: none;
-                color: #8b51ff;
+                /*color: #8b51ff;*/
+                color: #d7c3ff;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
@@ -40,8 +39,6 @@
                 padding-right: 10px;
             }
         </style>
-
-        <h2></h2>
 
         <div id="contacts">
             <?php if($_SERVER['REQUEST_URI'] == '/') { ?>

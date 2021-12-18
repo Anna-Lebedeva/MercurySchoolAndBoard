@@ -1,5 +1,5 @@
 /*=================================================*/
-/* X-Small devices (portrait phones 240px<X<360px)*/
+/* X-Small devices (portrait phones 240px <= X < 360px) */
 html {
     scroll-behavior: smooth;
 }
@@ -72,10 +72,6 @@ iframe body {
     color: #ff9ec8;
     text-transform: uppercase;
     -webkit-text-stroke: 1px #004fff;
-}
-
-.links-glavnaya {
-    display: none;
 }
 
 .fade {
@@ -190,7 +186,6 @@ h2 {
     margin-left: 10px;
 }
 
-
 .banner_comp {
     display: none;
 }
@@ -200,8 +195,7 @@ h2 {
     width: 100%;
     display: block;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .info {
@@ -228,8 +222,8 @@ h2 {
     top: 34% !important;
 }
 
-.links-profile {
-    display: none !important;
+.links-profile, .links-glavnaya {
+    display: none;
 }
 
 .td-menu {
@@ -286,7 +280,6 @@ h2 {
 .header_row ul.menu li.menu-item {
     display: block;
     border-bottom: 1px solid #333;
-    margin-top: 5px;
     transform: scale(1.15) translateY(-30px);
     opacity: 0;
     transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
@@ -374,9 +367,6 @@ h2 {
     vertical-align: middle;
 }
 
-/*.logo, .buttons {*/
-/*    width: 140px;*/
-/*}*/
 .links {
     text-align: center;
 }
@@ -648,16 +638,20 @@ h2 {
 .fc .fc-toolbar-title {
     font-size: 20px;
 }
+
 .fc table {
     font-size: 10px !important;
 }
+
 .fc .fc-timegrid-slot {
     height: auto !important;
 }
+
 .fc .fc-col-header-cell-cushion {
     padding: 0 !important;
     font-size: 9px;
 }
+
 .dialog_calendar {
     display: none;
     position: absolute;
@@ -667,22 +661,28 @@ h2 {
     width: 100%;
     margin-top: 20px;
 }
+
 .fc .fc-button-group {
     flex-direction: column;
 }
-.fc-direction-ltr .fc-toolbar>*>:not(:first-child) {
+
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
     margin-left: 0 !important;
 }
+
 #calendar > div.fc-view-harness.fc-view-harness-active {
     height: 1000px !important;
 }
+
 .fc .fc-toolbar.fc-header-toolbar {
     margin-bottom: 4px !important;
     margin-top: 2px;
 }
+
 #customRange1 {
     display: none;
 }
+
 .drag-container {
     display: flex;
     flex: 1 1 auto;
@@ -690,6 +690,7 @@ h2 {
     margin-top: 10px;
     flex-direction: column;
 }
+
 .panel-one {
     width: 100%;
     height: 85vh;
@@ -700,19 +701,104 @@ h2 {
     display: none;
 }
 
+#our-prices {
+    margin-top: 48px;
+}
+
+.header_row ul.menu li.books-item {
+    display: none;
+}
+
+.bank-card-img {
+    width: 40px;
+    float: left;
+}
+
+.bank-card-text {
+    color: #d9dcff;
+    display: inline-block;
+    margin-top: 8px;
+    float: left;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
 /*=================================================*/
-/*Small devices (landscape phones, 360px and up)*/
+/*Small devices (landscape phones, 360px <= X < 576px) */
 @media (min-width: 360px) {
+    .header_row ul.menu li.menu-item {
+        margin-top: 5px;
+    }
+
+    .main_td {
+        width: 360px;
+    }
+
     .bt {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .img-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .price-card {
+        height: 185px;
+    }
+
+    .banner_mobile {
+        height: 60px;
+    }
+
+    .fc .fc-col-header-cell-cushion {
+        font-size: 13px;
+    }
+
+    .fc table {
+        font-size: 11px !important;
+    }
+
+    .panel-one {
+        height: 92vh;
+    }
+
+    #contacts {
+        margin-top: 200px;
+    }
+
+    .bank-card-img {
+        width: 50px;
+    }
+
+    .bank-card-text {
+        margin-top: 8px;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+}
+
+/*=================================================*/
+/*Small devices (landscape phones, 576px <= X < 768px) */
+@media (min-width: 576px) {
+    .bt {
+        font-size: 15px;
+    }
+
+    .img-logo {
+        width: auto;
         height: 30px;
+        object-fit: unset;
     }
 
     .info-card-title-left, .info-card-title-right {
         font-size: 28px;
+    }
+    .bank-card-text {
+        margin-top: 8px;
+        font-size: 20px;
+        padding-left: 10px;
     }
 
     h1 {
@@ -772,26 +858,8 @@ h2 {
         width: 257px;
     }
 
-    #burger, .menu {
-        display: none;
-    }
-
     #fullscreen-bg {
         display: block;
-    }
-
-    .teacher-params {
-        width: 200px;
-        display: inline-block;
-        left: 70%;
-        margin: -100px;
-    }
-
-    .teacher-param-label {
-        display: inline-block;
-        position: absolute;
-        margin-top: 42px;
-        font-size: 26px;
     }
 
     .greetings {
@@ -801,33 +869,93 @@ h2 {
     .fc .fc-toolbar-title {
         font-size: 1.75em;
     }
+
     .fc table {
         font-size: 1em !important;
     }
+
     #calendar {
         padding: 5px;
     }
+
     .fc .fc-timegrid-slot {
         height: 1.5em !important;
     }
+
     .fc .fc-col-header-cell-cushion {
         padding: 2px 4px !important;
     }
+
     .dialog_calendar {
         left: 50%;
         width: 300px;
         margin-left: -150px;
         margin-top: auto;
     }
+
     .fc .fc-button-group {
         flex-direction: row;
     }
-    .fc-direction-ltr .fc-toolbar>*>:not(:first-child) {
+
+    .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
         margin-left: .75em !important;
     }
+
     .fc .fc-toolbar.fc-header-toolbar {
         margin-bottom: 1.5em !important;
     }
+
+    #our-prices {
+        margin-top: 110px;
+    }
+
+    .banner_mobile {
+        margin-top: 50px;
+    }
+
+    #contacts {
+        margin-top: 100px;
+    }
+
+    .header_row ul.menu li.books-item {
+        display: block;
+    }
+
+    .bank-card-img {
+        width: 80px;
+    }
+}
+
+/*=================================================*/
+/* Medium devices (tablets, 768px <= X < 992px) */
+@media (min-width: 768px) {
+    #burger, .menu {
+        display: none;
+    }
+    .links-profile, .links-glavnaya {
+        display: table-cell;
+    }
+    .main_td {
+        width: 625px;
+    }
+    #contacts {
+        margin-top: 240px;
+    }
+    .img-logo {
+        height: 36px;
+    }
+    .links-profile a {
+        font-size: 18px;
+    }
+}
+
+/*=================================================*/
+/* Large devices (desktops, 992px <= X < 1200px) */
+@media (min-width: 992px) {
+    .panel-one {
+        width: 70%;
+    }
+
     #customRange1 {
         display: inline-block;
     }
@@ -836,9 +964,18 @@ h2 {
         flex-direction: row;
         height: 675px;
     }
-    .panel-one {
-        width: 70%;
+
+    .teacher-param-label {
+        margin-top: 42px;
+        font-size: 26px;
     }
+    .teacher-params {
+        width: 200px;
+        display: inline-block;
+        left: 70%;
+        margin: -100px;
+    }
+
     .panel-two {
         width: 30%;
         flex: 1;
@@ -846,31 +983,13 @@ h2 {
 }
 
 /*=================================================*/
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-
-}
-
-/*=================================================*/
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-
-}
-
-/*=================================================*/
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
-}
-
-/*=================================================*/
-/* X-Large devices (large desktops, 1200px and up)*/
+/* X-Large devices (large desktops, 1200px <= X < 1400px) */
 @media (min-width: 1200px) {
 
 }
 
 /*=================================================*/
-/* XX-Large devices (larger desktops, 1400px and up)*/
+/* XX-Large devices (larger desktops, 1400px <= X) */
 @media (min-width: 1400px) {
 
 }

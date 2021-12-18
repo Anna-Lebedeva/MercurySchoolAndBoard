@@ -245,15 +245,25 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
 
             const drag = (e) => {
                 document.selection ? document.selection.empty() : window.getSelection().removeAllRanges();
-                left.style.width = (e.pageX - bar.offsetWidth / 2) + 'px';
+                if (e.touches) {
+                    left.style.width = (e.touches[0].pageX - bar.offsetWidth / 2) + 'px';
+                } else {
+                    left.style.width = (e.pageX - bar.offsetWidth / 2) + 'px';
+                }
                 localStorage.setItem('drag_rng_value', '' + (e.pageX / window.innerWidth * 10000))
             }
             rng.addEventListener('mousedown', () => {
                 document.addEventListener('mousemove', drag);
             });
+            rng.addEventListener('touchstart', () => {
+                document.addEventListener('touchmove', drag);
+            });
 
             document.addEventListener('mouseup', () => {
                 document.removeEventListener('mousemove', drag);
+            });
+            document.addEventListener('touchend', () => {
+                document.removeEventListener('touchmove', drag);
             });
 
             const chosen_book = localStorage.getItem('chosen_book')
@@ -297,8 +307,21 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
         .img-logo {
             height: 30px;
         }
+        @media (min-width: 360px) {
+            .img-logo {
+                height: 33px;
+                width: 33px;
+            }
+        }
+        @media (min-width: 576px) {
+            .img-logo {
+                width: auto;
+                height: 30px;
+                object-fit: unset;
+            }
+        }
 
-        .colorLink {
+            .colorLink {
             font-size: 17px;
             font-weight: 400;
         }

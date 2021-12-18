@@ -8,5 +8,5 @@ function scrollDown() {
     const y = (Math.max.apply(null, result)) / scale;
     const hash = '#' + (x | 0) + ',' + (y | 0) + ',' + scale.toFixed(1);
     localStorage.setItem('board-coords', hash);
-    window.scrollTo(x * scale, y * scale);
+    window.scrollTo({left: x * scale, top: y * scale, behavior: "smooth"});
 }

@@ -82,6 +82,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         .select-items div:hover, .same-as-selected {
             background-color: rgba(0, 0, 0, 0.1);
         }
+        #contacts {
+            margin-top: 20px;
+        }
     </style>
 
 
