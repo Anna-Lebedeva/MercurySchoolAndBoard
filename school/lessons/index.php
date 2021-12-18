@@ -21,8 +21,8 @@ $clNav = new clNav($clMysql);
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Главная страница</title>
-        <link rel="stylesheet" href="/css/style.css?v=<?= rand(1, 1000000) ?>" type="text/css">
-        <link rel="stylesheet" href="/css/reset.css?v=<?= rand(1, 1000000) ?>" type="text/css">
+<!--        <link rel="stylesheet" href="/css/style.css?v=--><?//= rand(1, 1000000) ?><!--" type="text/css">-->
+        <link rel="stylesheet" href="/css/responsive.css?v=<?= rand(1, 1000000) ?>" type="text/css">
         <link rel="stylesheet" href="/css/Stratos%20LC%20Web.css" type="text/css">
         <link href='/css/calendar.css' rel='stylesheet'/>
         <link rel="stylesheet" href="/css/font-awesome.min.css">
@@ -54,7 +54,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
 ?>
 
 
-<table style="height: 100%; width: 100%;" cellpadding="0" cellspacing="0">
+<table class="lesson-body" style="height: 100%; width: 100%;" cellpadding="0" cellspacing="0">
     <tbody>
 <tr>
 
@@ -239,7 +239,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
 
             let stored_val = localStorage.getItem('drag_rng_value');
             rng.value = stored_val ? stored_val : 7000;
-            left.style.width = (rng.value / 10000 * window.innerWidth) + 'px';
+            if (stored_val) {
+                left.style.width = (rng.value / 10000 * window.innerWidth) + 'px';
+            }
 
             const drag = (e) => {
                 document.selection ? document.selection.empty() : window.getSelection().removeAllRanges();
@@ -278,27 +280,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
             background-color: #fffcef;
         }
 
-        .drag-container {
-            display: flex;
-            flex: 1 1 auto;
-            height: 100%;
-            margin-top: -10px;
-        }
-
         .dragbar {
             cursor: col-resize;
             background-color: #9b9b9b;
-        }
-
-        .panel-one {
-            width: 70%;
-            overflow: hidden;
-        }
-
-        .panel-two {
-            flex: 1;
-            width: 30%;
-            overflow: hidden;
         }
 
         #shapochka {

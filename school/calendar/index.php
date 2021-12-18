@@ -5,18 +5,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
 
 <? if ($clNav->flag_auth == 1) { ?>
     <style>
-        .dialog_calendar {
-            display: none;
-            position: absolute;
-            z-index: 100;
-            border-radius: 4px;
-            background: #FFF;
-            left: 50%;
-            margin-left: -150px;
-            width: 300px;
-            height: auto;
-
-        }
 
         .bt_gray2 {
             background-color: #474747;
@@ -116,19 +104,24 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; ?>
 
                 ?>
 
-
                 <input type="hidden" value="" class="id_row">
                 <input type="hidden" value="" class="data_db">
                 <p style="color: #000;text-align: left;padding: 0 0 10px 0; margin: 0;">Тема</p>
-                <input type="text" class="input_tema" value="" style="width: 260px;">
+                <label>
+                    <input type="text" class="input-field input_tema" value="">
+                </label>
                 <p style="color: #000;text-align: left;padding: 0 0 10px 0; margin: 20px 0 0 0;">Начало занятия</p>
-                <input type="text" value="" disabled="disabled" class="input_date"
-                       style="width: 260px;background-color: #f6f6f6">
+                <label>
+                    <input type="text" value="" disabled="disabled" class="input-field input_date"
+                           style="background-color: #f6f6f6">
+                </label>
                 <p style="color: #000;text-align: left;padding: 0 0 10px 0; margin: 20px 0 0 0;">Длительность</p>
-                <select style="width: 274px;">
-                    <option value="60 минут">60 минут</option>
+                <label>
+                    <select class="input-field" style="width: 100%">
+                        <option value="60 минут">60 минут</option>
 
-                </select>
+                    </select>
+                </label>
                 <div style="padding-top: 20px;">
                     <input type="button" value="Сохранить" onclick="save_calendar()" class="btYellow2 btDialogCalendar">
                     <input type="button" value="Удалить" onclick="remove_calendar();" class="btRed2"

@@ -85,7 +85,6 @@
 
                 let date_urok = info.dateStr;
                 $('.dialog_calendar input:eq(1)').val(date + " " + time);
-                $('.dialog_calendar input:eq(1)').val(date + " " + time);
 
                 show_dialog_calendar();
 
@@ -320,11 +319,7 @@
 
 
 <style>
-    #calendar {
-        background-color: #bdaeff;
-        color: #000e;
-        padding: 5px;
-    }
+
 
     .fc-event-main-frame {
         cursor: pointer;
@@ -332,10 +327,6 @@
 
     #dialog-lesson {
         background-color: white;
-    }
-
-    #calendar > div.fc-view-harness.fc-view-harness-active {
-        height: 876px !important;
     }
 
     .ui-widget-overlay {

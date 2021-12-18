@@ -3,19 +3,19 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 ?>
 <div style="text-align: left;">
-    <div style="font-size:36px;text-align: left; color: #a695ff">Здравствуйте, <?= $clNav->name ?></div>
-    <?
+    <div class="greetings">Здравствуйте, <?= $clNav->name ?></div>
+    <?php
 
-    echo '<pre style="color: #FFF">';
-    print_r($clNav);
-    echo '</pre>';
+//    echo '<pre style="color: #FFF">';
+//    print_r($clNav);
+//    echo '</pre>';
     ?>
     <?php if ($clNav->flag_uchitel == 1) { ?>
 
-    <?
+        <?php
 
 
-        ?>dfdfd<?
+        ?>dfdfd<?php
 
     }
     else
@@ -23,11 +23,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
      ?>   <div style="text-align: left; color: #d4c5ff; font-size: 26px">Вам еще подбирается учитель</div>
         <br>
 
-        <div style="text-align: left; color: #ffd580; font-size: 26px">Для лучшего подбора заполни анкету: "Мои идеальный учитель:</div>
+        <div style="text-align: left; color: #ffd580; font-size: 26px">Для лучшего подбора заполни анкету "Мой идеальный учитель":</div>
 
         <br>
-        <div style="text-align: left; color: #f8cd7d; font-size: 26px;display: inline-block;
-    position: absolute;    margin-top: -8px;">Строгость</div>
+        <div class="teacher-param-label">Строгость</div>
 
 
     <style>
@@ -89,9 +88,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <!--<h2>Custom Select</h2>-->
 
     <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
-    <div class="custom-select" style="width:200px;    display: inline-block;
-    left: 70%;
-    margin: -100px;">
+    <div class="custom-select teacher-params">
         <select>
             <option value="0">Выбери строгость</option>
             <option value="1">Добрый:)</option>
@@ -100,14 +97,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </select>
     </div>
 
-    <div style="height: 50px;"></div>
+    <div class="teacher-param-label">Задает домашнее задание</div>
 
-    <div style="text-align: left; color: #ffc880; font-size: 26px;display: inline-block;
-    position: absolute;    margin-top: -8px;">Задает домашнее задание</div>
-
-    <div class="custom-select" style="width:200px;display: inline-block;
-    left: 70%;
-    margin: -100px;">
+    <div class="custom-select">
         <select>
             <option value="0">Задает д/з</option>
             <option value="1">Не задаёт</option>
@@ -116,13 +108,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </select>
     </div>
 
-    <div style="height: 50px;"></div>
-    <div style="text-align: left; color: #ffcd84; font-size: 26px;display: inline-block;
-    position: absolute;    margin-top: -8px;">Возраст</div>
-
-    <div class="custom-select" style="width:200px;display: inline-block;
-    left: 70%;
-    margin: -100px;">
+    <div class="teacher-param-label">Возраст</div>
+    <div class="custom-select teacher-params">
         <select>
             <option value="0">Возраст</option>
             <option value="1">Молодой</option>
@@ -210,7 +197,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 </div>
 
-        <?
+<?php
     }
     ?>
 

@@ -1,4 +1,4 @@
-<div class="modal-form dialog dialog_auth" id="dialog_auth" style="display: none;height: auto;">
+<div class="modal-form dialog2 dialog_auth" id="dialog_auth" style="display: none;height: auto;">
     <div style="border-bottom: 1px solid #908bd9;">
 
         <div style="float: right; margin-top: 15px; margin-right: 15px;cursor: pointer;"
@@ -15,37 +15,25 @@
 
     </div>
 
-    <div class="h1" style="padding-top: 22px;
-    padding-left: 21px;
-    padding-bottom: 1px;
-    font-size: 15px;
-    color: #FFF;">Ваш email
+    <div class="h1 reg-label" style="padding-top: 22px;">Ваш email
     </div>
 
-    <div class="h1" style="padding-top: 5px;
-    padding-left: 21px;
-    padding-bottom: 1px;
-    font-size: 15px;
-    color: #ebf0ff;">
-        <input type="text" style="width: 257px;" class="auth_email" placeholder="Ваш email" size="38" autofocus >
+    <div class="h1 reg-input">
+        <label>
+            <input type="text" class="input-field auth_email" placeholder="Ваш email" size="38" autofocus >
+        </label>
     </div>
 
-    <div class="h1" style="padding-top: 15px;
-    padding-left: 21px;
-    padding-bottom: 1px;
-    font-size: 15px;
-    color: #FFF;">Пароль
+    <div class="h1 reg-label">Пароль
     </div>
 
     <div style="border-bottom: 1px solid #908bd9;">
 
-        <div class="h1" style="padding-top: 5px;
-    padding-left: 21px;
-    padding-bottom: 30px;
-    font-size: 15px;
-    color: #CDCCEE;">
-            <input id="auth_pass" type="password" style="width: 257px;" class="auth_pass" onkeydown="key_pass(this)"
-                   placeholder="Пароль" size="38">
+        <div class="h1 reg-input">
+            <label>
+                <input id="auth_pass" type="password" class="input-field auth_pass"
+                       onkeydown="key_pass(this)" placeholder="Пароль" size="38">
+            </label>
         </div>
     </div>
 

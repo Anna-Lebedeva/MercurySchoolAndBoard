@@ -5,8 +5,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 <h1>Mercury School - инновационная школа математики
     <br><span>Уроки с преподавателем в онлайн-школе Mercury School</span>
 </h1>
-<p style="color: #0ea0ff; font-size: 38px;">Для школьников любого возраста</p>
+<p class="for-who">Для школьников любого возраста</p>
 
+<!--<div class="video_block" style="width: 300px">-->
 <div class="video_block">
     <video id="vid" width="100%" height="100%" autoplay muted loop>
         <source src="https://storage.googleapis.com/ms_storage/videooschool2.mp4" type="video/mp4"/>
@@ -56,7 +57,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 
 
 <div id="our-prices" style="margin-top: 110px;">
-    <h2 style="text-align:  center; font-weight: 700; font-size: 32px; color: #ff9ec8; text-transform: uppercase; -webkit-text-stroke: 1px #004fff;">
+    <h2 class="pakety-zanyatiy">
         Пакеты занятий</h2>
 </div>
 
@@ -92,7 +93,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php'; //Подключаем шап
 </table>
 
 
-<div style="max-width: 900px;margin-top: 50px;" class="banner_mobile">
+<div class="banner_mobile">
     <div class="slider1">
         <div class="banner_pic1 table_banner">
             <div class="price-card">

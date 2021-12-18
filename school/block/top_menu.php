@@ -8,7 +8,7 @@
             <div class="bar topBar"></div>
             <div class="bar btmBar"></div>
         </td>
-        <td class="td-menu" style="vertical-align: top;">
+        <td class="td-menu">
             <ul class="menu">
                     <li class="menu-item"><a href="/profile">Личный кабинет</a></li>
                     <li class="menu-item"><a href="/calendar">Расписание</a></li>
@@ -31,7 +31,6 @@
                 <a href="#our-prices" class="colorLink">Цены</a>
             <?php } else { ?>
         <td class="links links-profile">
-
 
                 <a href="/profile" class="colorLink" style="margin-left: -760px">Личный кабинет</a>
 
@@ -107,7 +106,7 @@
         // header.classList.toggle('menu-opened');
         $('.header_row').toggleClass('menu-opened').slideDown(300);  // Не работает
         $('.body-table').toggle(0);
-        $('#drag-container').toggle(0);
+        $('.lesson-body').toggle(0);
     }
 
 </script>

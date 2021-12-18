@@ -17,7 +17,7 @@ iframe body {
     height: 100%;
 }
 .main_td, .video_block {
-    width: 900px;
+    width: 1370px;
 }
 
 .fade {
@@ -524,10 +524,13 @@ body {
 /* comp */
 
 /*!!!!!!!!!!!! от 955 до 1250*/
-@media (min-width: 955px) and (max-width: 1250px) {
-    .main_td, .video_block
+@media only screen and (device-width: 1080px) and (orientation: portrait) {
+    .main_td
     {
         width: 900px;
+    }
+    .video_block {
+        width: 300px;
     }
 
     #first-card {
@@ -543,18 +546,18 @@ body {
     }
 }
 
-@media (max-width: 955px) {
+@media (max-width: 955px) and (orientation: portrait) {
     #naverh, #phone {
         width: auto;
     }
 }
 
 /*!!!!!!!!!!!! от 950*/
-@media (min-width: 955px) {
-   .main_td, .video_block
-   {
-       width: 900px;
-   }
+@media (min-width: 955px) and (orientation: portrait) {
+   /*.main_td, .video_block*/
+   /*{*/
+   /*    width: 1370px;*/
+   /*}*/
 
     .prices {
         display: table;
@@ -588,17 +591,18 @@ body {
 }
 
 /*!!!!!!!!!! от 1250*/
-@media (min-width: 1250px) {
+@media (min-width: 1250px) and (orientation: portrait){
     .colorLink {
         padding: 8px 16px;
     }
     .price-card {
         /*margin: 0;*/
     }
+
 }
 
 /*!!!!!!!!!!! до 1052*/
-@media (max-width: 1052px) {
+@media (max-width: 1052px) and (orientation: portrait){
     .links-profile {
         display: none !important;
     }

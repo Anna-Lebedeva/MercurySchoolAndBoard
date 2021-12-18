@@ -32,10 +32,8 @@ $clNav = new clNav($clMysql);
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-
-
-    <link rel="stylesheet" href="/css/style.css?v=<?= rand(1, 1000000) ?>" type="text/css">
-    <link rel="stylesheet" href="/css/reset.css?v=<?= rand(1, 1000000) ?>" type="text/css">
+<!--    <link rel="stylesheet" href="/css/style.css?v=--><?//= rand(1, 1000000) ?><!--" type="text/css">-->
+    <link rel="stylesheet" href="/css/responsive.css?v=<?= rand(1, 1000000) ?>" type="text/css">
     <link rel="stylesheet" href="/css/Stratos%20LC%20Web.css" type="text/css">
     <link href='/css/calendar.css' rel='stylesheet'/>
     <link rel="stylesheet" href="/css/font-awesome.min.css">
