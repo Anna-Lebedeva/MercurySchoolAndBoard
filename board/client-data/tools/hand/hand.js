@@ -422,37 +422,44 @@
 	}
 
 	function releaseSelector(x, y, evt) {
-		if (selectorState == selectorStates.selecting) {
+		if (selectorState === selectorStates.selecting) {
 			selected_els = calculateSelection();
-			if (selected_els.length == 0) {
+			if (selected_els.length === 0) {
 				hideSelectionUI();
 			}
-		} else if (selectorState == selectorStates.transform)
+		} else if (selectorState === selectorStates.transform)
 			resetSelectionRect();
-		if (selected_els.length != 0) showSelectionButtons();
+		if (selected_els.length !== 0) showSelectionButtons();
 		transform_elements = [];
 		selectorState = selectorStates.pointing;
 	}
 
 	function moveSelector(x, y, evt) {
-		if (selectorState == selectorStates.selecting) {
+		if (selectorState === selectorStates.selecting) {
 			updateRect(x, y, selectionRect);
-		} else if (selectorState == selectorStates.transform && currentTransform) {
+		} else if (selectorState === selectorStates.transform && currentTransform) {
 			currentTransform(x, y);
 		}
 	}
 
 	function startHand(x, y, evt, isTouchEvent) {
 		if (!isTouchEvent) {
-			selected = {
+		selected = {
 				x: document.documentElement.scrollLeft + evt.clientX,
 				y: document.documentElement.scrollTop + evt.clientY,
+			}
+		} else {
+			selected = {
+				x: document.documentElement.scrollLeft + evt.touches[0].clientX,
+				y: document.documentElement.scrollTop + evt.touches[0].clientY,
 			}
 		}
 	}
 	function moveHand(x, y, evt, isTouchEvent) {
 		if (selected && !isTouchEvent) { //Let the browser handle touch to scroll
-			window.scrollTo(selected.x - evt.clientX, selected.y - evt.clientY);
+			window.scrollTo(selected.x - evt.touches[0].clientX, selected.y - evt.touches[0].clientY);
+		} else if (selected && isTouchEvent && evt.touches[0]) {
+			window.scrollTo(selected.x - evt.touches[0].clientX, selected.y - evt.touches[0].clientY);
 		}
 	}
 
