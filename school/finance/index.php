@@ -5,7 +5,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
     <h1>Оплата занятий производится по следующим реквизитам:</h1>
 
-<table>
+<table style="float: left">
     <tr>
         <td>
             <img class="bank-card-img" src="/img/finance/sber2.jpg" alt="">
@@ -34,6 +34,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         @media (min-width: 360px) {
             #contacts {
                 margin-top: 300px;
+            }
+        }
+        @media (min-width: 992px) {
+            #contacts {
+                margin-top: 430px;
             }
         }
     </style>

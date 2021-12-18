@@ -116,6 +116,7 @@ iframe body {
     width: 100%;
     line-height: 0;
     margin-top: 4px;
+    background: black;
 }
 
 #fullscreen-bg {
@@ -955,7 +956,51 @@ h2 {
     .panel-one {
         width: 70%;
     }
+    .main_td {
+        width: 70%;
+    }
+    .img-logo {
+        height: 46px;
+        width: auto;
+    }
+    .bt {
+        font-size: 20px;
+    }
+    .links-profile, .links-glavnaya {
+        width: 100%;
+    }
+    .links-profile a:first-child, .links-glavnaya a:first-child {
+        margin-left: -182px;
+    }
+    .colorLink, .menu-item, .links-profile a {
+        font-size: 20px;
+    }
+    .prices {
+        display: table;
+    }
+    .banner_mobile {
+        display: none;
+    }
+    .info-card-block-left, .info-card-block-right {
+        display: block;
+        margin-top: 30px;
+    }
 
+    .info-card-block-left {
+        margin-left: 120px;
+    }
+
+    .info-card-block-right {
+        margin-right: 120px;
+    }
+
+    .info-card-title-left {
+        margin-left: 114px;
+    }
+
+    .info-card-title-right {
+        margin-right: 114px;
+    }
     #customRange1 {
         display: inline-block;
     }
@@ -969,16 +1014,13 @@ h2 {
         margin-top: 42px;
         font-size: 26px;
     }
-    .teacher-params {
-        width: 200px;
-        display: inline-block;
-        left: 70%;
-        margin: -100px;
+    .panel-one {
+        height: 100vh;
     }
-
     .panel-two {
         width: 30%;
         flex: 1;
+        display: block;
     }
 }
 
