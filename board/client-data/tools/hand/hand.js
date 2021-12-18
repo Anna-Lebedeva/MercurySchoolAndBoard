@@ -110,8 +110,8 @@
 	}
 
 	function duplicateSelection() {
-		if (!(selectorState == selectorStates.pointing)
-			|| (selected_els.length == 0)) return;
+		if (!(selectorState === selectorStates.pointing)
+			|| (selected_els.length === 0)) return;
 		var msgs = [];
 		var newids = [];
 		for (var i = 0; i < selected_els.length; i++) {
@@ -444,22 +444,15 @@
 
 	function startHand(x, y, evt, isTouchEvent) {
 		if (!isTouchEvent) {
-		selected = {
+			selected = {
 				x: document.documentElement.scrollLeft + evt.clientX,
 				y: document.documentElement.scrollTop + evt.clientY,
-			}
-		} else {
-			selected = {
-				x: document.documentElement.scrollLeft + evt.touches[0].clientX,
-				y: document.documentElement.scrollTop + evt.touches[0].clientY,
 			}
 		}
 	}
 	function moveHand(x, y, evt, isTouchEvent) {
 		if (selected && !isTouchEvent) { //Let the browser handle touch to scroll
-			window.scrollTo(selected.x - evt.touches[0].clientX, selected.y - evt.touches[0].clientY);
-		} else if (selected && isTouchEvent && evt.touches[0]) {
-			window.scrollTo(selected.x - evt.touches[0].clientX, selected.y - evt.touches[0].clientY);
+			window.scrollTo(selected.x - evt.clientX, selected.y - evt.clientY);
 		}
 	}
 
@@ -481,13 +474,13 @@
 	}
 
 	function deleteShortcut(e) {
-		if (e.key == "Delete" &&
+		if (e.key === "Delete" &&
 			!e.target.matches("input[type=text], textarea"))
 			deleteSelection();
 	}
 
 	function duplicateShortcut(e) {
-		if (e.key == "d" &&
+		if (e.key === "d" &&
 			!e.target.matches("input[type=text], textarea"))
 			duplicateSelection();
 	}
