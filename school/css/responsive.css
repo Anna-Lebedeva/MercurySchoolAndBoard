@@ -940,7 +940,7 @@ h2 {
         width: 625px;
     }
     #contacts {
-        margin-top: 240px;
+        margin-top: 140px;
     }
     .img-logo {
         height: 36px;
@@ -1021,6 +1021,12 @@ h2 {
         width: 30%;
         flex: 1;
         display: block;
+    }
+    h1 span{
+        font-size: 45px;
+    }
+    #contacts {
+        margin-top: 140px;
     }
 }
 
