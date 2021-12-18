@@ -448,7 +448,7 @@
 				x: document.documentElement.scrollLeft + evt.clientX,
 				y: document.documentElement.scrollTop + evt.clientY,
 			}
-		} else {
+		} else if (evt.touches) {
 			selected = {
 				x: document.documentElement.scrollLeft + evt.touches[0].clientX,
 				y: document.documentElement.scrollTop + evt.touches[0].clientY,
@@ -457,8 +457,8 @@
 	}
 	function moveHand(x, y, evt, isTouchEvent) {
 		if (selected && !isTouchEvent) { //Let the browser handle touch to scroll
-			window.scrollTo(selected.x - evt.touches[0].clientX, selected.y - evt.touches[0].clientY);
-		} else if (selected && isTouchEvent && evt.touches[0]) {
+			window.scrollTo(selected.x - evt.clientX, selected.y - evt.clientY);
+		} else if (selected && isTouchEvent && evt.touches) {
 			window.scrollTo(selected.x - evt.touches[0].clientX, selected.y - evt.touches[0].clientY);
 		}
 	}
