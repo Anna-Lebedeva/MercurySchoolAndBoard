@@ -456,9 +456,9 @@
 		}
 	}
 	function moveHand(x, y, evt, isTouchEvent) {
-		if (selected && !isTouchEvent) { //Let the browser handle touch to scroll
+		if (selected && !isTouchEvent) { // Let the browser handle touch to scroll
 			window.scrollTo(selected.x - evt.clientX, selected.y - evt.clientY);
-		} else if (selected && isTouchEvent && evt.touches) {
+		} else if (selected && isTouchEvent && typeof evt.touches[0] !== "undefined") {
 			window.scrollTo(selected.x - evt.touches[0].clientX, selected.y - evt.touches[0].clientY);
 		}
 	}
