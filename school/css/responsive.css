@@ -1028,16 +1028,24 @@ h2 {
     #contacts {
         margin-top: 140px;
     }
+    .links-glavnaya {
+        width: 100px;
+    }
 }
 
 /*=================================================*/
 /* X-Large devices (large desktops, 1200px <= X < 1400px) */
 @media (min-width: 1200px) {
+    .links-glavnaya {
+        width: 100px;
+    }
 
 }
 
 /*=================================================*/
 /* XX-Large devices (larger desktops, 1400px <= X) */
 @media (min-width: 1400px) {
-
+    .links-glavnaya {
+        width: 100px;
+    }
 }
