@@ -50,6 +50,14 @@ input, select, textarea {
     height: 33px;
     object-fit: cover;
     object-position: left;
+    position: absolute;
+    top: 6px;
+}
+.header_row.signed-out .img-logo {
+    left: 8px;
+}
+.header_row.signed-in .img-logo {
+    left: 48px;
 }
 
 iframe body {
@@ -738,10 +746,10 @@ h2 {
     .bt {
         font-size: 15px;
     }
-
-    .img-logo {
-        width: 40px;
-        height: 40px;
+    .header_row.signed-in .img-logo {
+        width: auto;
+        height: auto;
+        object-fit: unset;
     }
 
     .price-card {
@@ -786,13 +794,6 @@ h2 {
     .bt {
         font-size: 15px;
     }
-
-    .img-logo {
-        width: auto;
-        height: 30px;
-        object-fit: unset;
-    }
-
     .info-card-title-left, .info-card-title-right {
         font-size: 28px;
     }
@@ -800,6 +801,11 @@ h2 {
         margin-top: 8px;
         font-size: 20px;
         padding-left: 10px;
+    }
+    .header_row.signed-out .img-logo {
+        width: auto;
+        height: auto;
+        object-fit: unset;
     }
 
     h1 {
@@ -930,47 +936,52 @@ h2 {
 /*=================================================*/
 /* Medium devices (tablets, 768px <= X < 992px) */
 @media (min-width: 768px) {
-    #burger, .menu {
-        display: none;
-    }
-    .links-profile, .links-glavnaya {
-        display: table-cell;
-    }
     .main_td {
         width: 625px;
     }
     #contacts {
         margin-top: 140px;
     }
-    .img-logo {
-        height: 36px;
-    }
-    .links-profile a {
-        font-size: 18px;
+    .links-glavnaya, .buttons {
+        width: 33%;
     }
 }
 
 /*=================================================*/
 /* Large devices (desktops, 992px <= X < 1200px) */
 @media (min-width: 992px) {
+    #burger, .menu {
+        display: none;
+    }
+    .img-logo {
+        position: unset;
+    }
+    .links-profile, .links-glavnaya {
+        display: table-cell;
+    }
+    .links-profile {
+        width: 100%;
+    }
+    .links-profile a {
+        font-size: 18px;
+    }
+    .links-profile a:first-child {
+        margin-left: -125px;
+    }
+    .links-glavnaya a:first-child {
+        margin-left: -73px;
+    }
     .panel-one {
         width: 70%;
     }
     .main_td {
         width: 70%;
     }
-    .img-logo {
-        height: 46px;
-        width: auto;
+    .logo {
+        width: 1px;
     }
     .bt {
         font-size: 20px;
-    }
-    .links-profile, .links-glavnaya {
-        width: 100%;
-    }
-    .links-profile a:first-child, .links-glavnaya a:first-child {
-        margin-left: -182px;
     }
     .colorLink, .menu-item, .links-profile a {
         font-size: 20px;
@@ -1028,24 +1039,16 @@ h2 {
     #contacts {
         margin-top: 140px;
     }
-    .links-glavnaya {
-        width: 100px;
-    }
 }
 
 /*=================================================*/
 /* X-Large devices (large desktops, 1200px <= X < 1400px) */
 @media (min-width: 1200px) {
-    .links-glavnaya {
-        width: 100px;
-    }
 
 }
 
 /*=================================================*/
 /* XX-Large devices (larger desktops, 1400px <= X) */
 @media (min-width: 1400px) {
-    .links-glavnaya {
-        width: 100px;
-    }
+
 }

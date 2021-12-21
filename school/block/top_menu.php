@@ -1,6 +1,10 @@
 
+<?php if ($clNav->flag_auth == 0) { ?>
+<table class="header_row signed-out">
+<?php } else { ?>
+<table class="header_row signed-in">
+<?php } ?>
 
-<table class="header_row">
     <tbody id="shapochka">
     <tr>
         <?php if ($clNav->flag_auth == 1) { ?>
