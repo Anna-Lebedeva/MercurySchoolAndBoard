@@ -11,7 +11,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 //    echo '</pre>';
     ?>
     <?php if ($clNav->flag_uchitel == 1) { ?>
-        <div style="text-align: left; color: #ffd580; font-size: 26px">В этом месяце Вы провели 0 занятий. Ваша зарплата 0 рублей.</div>
+        <div style="text-align: left; color: #ffd580; font-size: 26px">В этом месяце Вы провели 0 занятий. Ваша зарплата составляет 0 рублей.</div>
         <?php
 
 
