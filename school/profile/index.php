@@ -15,7 +15,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <?php
 
 
-        ?>dfdfd<?php
+        ?><?php
 
     }
     else
