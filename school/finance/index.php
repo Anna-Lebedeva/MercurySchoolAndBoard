@@ -2,6 +2,17 @@
 include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 ?>
 
+<?php if ($clNav->flag_uchitel == 1) { ?>
+
+    <?php
+
+
+    ?><?php
+
+}
+else
+{
+    ?>
 
     <h1>Оплата занятий производится по следующим реквизитам:</h1>
 
@@ -42,6 +53,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             }
         }
     </style>
+    <?php
+}
+?>
 
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . '/footer.php';
