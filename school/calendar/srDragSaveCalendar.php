@@ -1,4 +1,4 @@
-<?
+<?php
 include $_SERVER['DOCUMENT_ROOT'].'/clMysql.php'; //подключаем биб. для работы с БД
 
 include $_SERVER['DOCUMENT_ROOT'].'/clNav.php';

@@ -86,6 +86,7 @@ iframe body {
     width: 100%;
     height: 100%;
     position: fixed;
+    top: 0;
     background-color: rgba(0, 0, 0, 0.53);
     z-index: 100;
     display: none;
@@ -529,7 +530,13 @@ h2 {
     color: #ffbdbd;
     font-size: 14px;
 }
-
+.fc-event-title, .fc-event-time {
+    white-space: pre-line;
+}
+.fc-event-main-frame {
+    margin-left: 4px;
+    margin-top: 2px;
+}
 .result_reg_email, .result_reg_phone {
     text-align: center;
 }
@@ -576,7 +583,10 @@ h2 {
 }
 
 .dialog2 {
-    position: absolute;
+    position: fixed;
+    overflow-y: auto;
+    max-height: 80vh;
+    /*position: absolute;*/
     left: 50%;
     width: 100%;
     background-color: #635AFA;
@@ -663,7 +673,10 @@ h2 {
 
 .dialog_calendar {
     display: none;
-    position: absolute;
+    position: fixed;
+    overflow-y: auto;
+    /*position: absolute;*/
+    max-height: 80vh;
     z-index: 100;
     border-radius: 4px;
     background: #FFF;

@@ -2,7 +2,9 @@
 <div class="modal-form dialog2 dialog_reg" id="dialog_reg" style="display: none">
     <div style="border-bottom: 1px solid #908bd9;">
         <div style="float: right; margin-top: 15px; margin-right: 15px;cursor: pointer;"
-             onclick="document.getElementById('dialog_reg').style.display='none';$('#fade').css({display:'none'});">
+             onclick="document.getElementById('dialog_reg').style.display='none';$('#fade').css({display:'none'});
+             $('body').css({overflow: 'auto', width: '100%'})"
+        >
             <img src="/img/close.png" alt="x"></div>
         <div class="h1" style="padding-top: 22px;
     padding-left: 21px;
@@ -29,7 +31,7 @@
     <div class="result_reg_phone" style="display: none;"></div>
 
     <div class="h1 reg-label">Адрес электронной почты</div>
-    <div style="border-bottom: 1px solid #908bd9;">
+    <div style="border-bottom: 1px solid #908bd9;padding-bottom: 22px;">
         <div id="stroshka-with-email" class="h1 reg-input" style="padding-bottom: 10px;">
             <label>
                 <input type="text" class="input-field input_email" placeholder="Адрес электронной почты" size="38">
@@ -95,6 +97,7 @@
             if (h.includes('success')) {
                 $('.dialog_reg').css({display: 'none'});
                 $('#fade').css({display: 'none'});
+                $('body').css({overflow: 'auto', width: '100%'})
                 $('#messages').html('Сообщение успешно отправлено').slideDown(600).delay(3000).slideUp(600);
             }
             if (h.includes('email_send_error')) {
@@ -104,7 +107,7 @@
                 });
                 $('#stroshka-with-email').css({paddingBottom: 0})
                 $('.result_reg_email').css({display: 'block'}).html(
-                    '<div class="form-error" h1>Ошибка при отправке письма</h1></div>')
+                    '<div class="form-error"><h1>Ошибка при отправке письма</h1></div>')
             }
 
             $(t).removeAttr('disabled');

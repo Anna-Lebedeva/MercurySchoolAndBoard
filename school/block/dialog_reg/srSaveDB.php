@@ -12,6 +12,12 @@ $clMysql->ConnectedDefaultBase();
 $name = addslashes($_POST['name']); // Экранируем спец. символы (кавычки, ' - /')
 $phone = $_POST['phone'];
 $email = $_POST['email'];
+
+//if ($_SESSION['flag_teacher'] = 1) {
+//    $board_url = addslashes($_POST['board_url']);
+//} else {
+//    $board_url = '';
+//}
 $board_url = addslashes($_POST['board_url']);
 
 if (strpos($email, '@') === false) {

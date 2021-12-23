@@ -20,10 +20,15 @@ $clNav = new clNav($clMysql);
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Главная страница</title>
-<!--        <link rel="stylesheet" href="/css/style.css?v=--><?//= rand(1, 1000000) ?><!--" type="text/css">-->
+        <title>Урок - Mercury School</title>
+        <!--        <link rel="stylesheet" href="/css/style.css?v=--><? //= rand(1, 1000000) ?><!--" type="text/css">-->
         <link rel="stylesheet" href="/css/responsive.css?v=<?= rand(1, 1000000) ?>" type="text/css">
         <link rel="stylesheet" href="/css/Stratos%20LC%20Web.css" type="text/css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/img/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
         <link href='/css/calendar.css' rel='stylesheet'/>
         <link rel="stylesheet" href="/css/font-awesome.min.css">
         <meta name="yandex-verification" content="3793376a9581f55d"/>
@@ -35,6 +40,7 @@ $clNav = new clNav($clMysql);
 
         <link rel="stylesheet" href="/css/jquery.bxslider.css">
         <script src="/js/jquery.bxslider.min.js"></script>
+
         <?php include $_SERVER['DOCUMENT_ROOT'] . '/calendar/head.php'; ?>
     </head>
 <body>
@@ -75,15 +81,18 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
                         <iframe id="lesson-board" onload="load_frame(this)"
                                 src="<?= $clNav->board_link ?>/boards/<?= $clNav->board_url ?>"></iframe>
                     </div>
-                    <div class="dragbar" id="dragbar"></div>
+                    <div id="dragbar"></div>
                     <div class="panel-two" id="drag-right">
                         <?php
                         $url = "";
                         if (!array_key_exists("book", $_GET)) {
                             ?>
-                            <div style="background-color: ">Не выбран учебник :(<br><a href="/books">выбрать учебник</a>
-                            </div><?php
-                        } else {
+                            <div style="margin-top: 15px;margin-left: 15px;color: #a1a1a1">Не выбран учебник :(
+                                <br>
+                                <a href="/books" style="color: white">выбрать учебник</a>
+                            </div>
+
+                            <?php } else {
 //---------------------------------------------------------------------------------------------------------------------------------
                             if (intval($_GET['book'] == 1)) {
                                 $url = "/pdfs/1/1Dlyatehktolybitmatematiky.pdf";
@@ -290,7 +299,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
             background-color: #fffcef;
         }
 
-        .dragbar {
+        #dragbar {
             cursor: col-resize;
             background-color: #9b9b9b;
         }
@@ -307,12 +316,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
         .img-logo {
             height: 30px;
         }
+
         @media (min-width: 360px) {
             .img-logo {
                 height: 33px;
                 width: 33px;
             }
         }
+
         @media (min-width: 576px) {
             .img-logo {
                 width: auto;
@@ -321,7 +332,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
             }
         }
 
-            .colorLink {
+        .colorLink {
             font-size: 17px;
             font-weight: 400;
         }

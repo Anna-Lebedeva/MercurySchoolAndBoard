@@ -17,9 +17,9 @@
                     <li class="menu-item"><a href="/profile">Личный кабинет</a></li>
                     <li class="menu-item"><a href="/calendar">Расписание</a></li>
                     <li class="menu-item"><a href="/lessons">Урок</a></li>
-                    <li class="menu-item"><a href="/finance">Финансы</a></li>
                     <li class="menu-item books-item"><a href="/books">Учебники</a></li>
                 <?php if ($clNav->flag_teacher == 1) { ?>
+                    <li class="menu-item"><a href="/finance">Финансы</a></li>
                     <li class="menu-item"><a href="/admin">Управление</a></li>
                 <?php } ?>
             </ul>
@@ -38,10 +38,10 @@
                 <a href="/profile" class="colorLink">Личный кабинет</a>
                 <a href="/calendar" class="colorLink">Расписание</a>
                 <a href="/lessons" id="lessons-href" class="colorLink">Урок</a>
-                <a href="/finance" class="colorLink">Финансы</a>
                 <a href="/books" class="colorLink">Учебники</a>
             <?php } ?>
             <?php if ($clNav->flag_teacher == 1) { ?>
+                <a href="/finance" class="colorLink">Финансы</a>
                 <a style="color: red;" href="/admin" class="colorLink">Управление</a>
             <?php } ?>
         </td>
@@ -89,13 +89,14 @@
 
         $('.dialog_auth').fadeIn(200);
         $('.fade').fadeIn(200);
+        $('body').css({overflow: 'hidden', width: '98.3vw'});
         //    $('.dialog_auth').animate({top:'50px',height:'200px'},1000)
     }
 
     function show_dialog_reg() {
-
         $('.dialog_reg').fadeIn(200);
         $('.fade').fadeIn(200);
+        $('body').css({overflow: 'hidden', width: '98.3vw'})
     }
 
     const chosen_book = localStorage.getItem('chosen_book')

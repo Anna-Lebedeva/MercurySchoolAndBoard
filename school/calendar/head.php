@@ -1,10 +1,3 @@
-<?php
-
-
-
-
-         ?>
-
 <script>
 
     // function set_data(date,title)
@@ -99,7 +92,7 @@
 
                 let s = info.event.start.toLocaleString();
 
-                $('.input_tema').val(info.event.title)
+                $('.input_tema').val(info.event.title.split('\n')[1])
                 let a = s.split(' ');
                 let date = a[0];
                 date = date.replace(',', '');
@@ -125,12 +118,12 @@
                 $("label[for=id_time_start]").hide(); //лэйбел (текст рядом)
                 $("#id_time_start_prc").val(info.event.start.toLocaleString().replace(',', ''));  //todo удалить секунды
                 $("#id_duration").val((info.event._instance.range.end - info.event._instance.range.start) / 60000);
-                $("#id_subject").val(info.event.title).trigger('focus');
+                console.log(info.event.title.split('\n')[1]);
+                $("#id_subject").val(info.event.title.split('\n')[1]).trigger('focus');
                 $('.delete-btn').show();
-            }, eventAllow: function (dropInfo, draggedEvent) {
+            },
+            eventAllow: function (dropInfo, draggedEvent) {
                 // console.log(JSON.stringify(dropInfo));
-
-
 
 //время надо добавить---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -141,18 +134,12 @@
                 let startDay =  dropInfo.start.getDate()
                 let startHours = dropInfo.start.getHours();
                 let startMinutes = dropInfo.start.getMinutes();
-                let startSeconds = dropInfo.start.getSeconds();
-
 
                 let endYear = d2.getFullYear();
                 let endMonth = d2.getMonth();
                 let endDay = d2.getDate();
                 let endHours = d2.getHours();
                 let endMinutes = d2.getMinutes();
-                let endSeconds = d2.getSeconds();
-
-
-
 
                 if (startMonth <= 9)
                     startMonth = '0'+startMonth;
@@ -162,9 +149,6 @@
                     startHours = '0'+startHours;
                 if (startMinutes <= 9)
                     startMinutes = '0'+startMinutes;
-                if (startSeconds <= 9)
-                    startSeconds = '0'+startSeconds;
-
 
                 if (endMonth <= 9)
                     endMonth = '0'+endMonth;
@@ -175,18 +159,9 @@
                     endHours = '0'+endHours;
                 if (endMinutes <= 9)
                     endMinutes = '0'+endMinutes;
-                if (endSeconds <= 9)
-                    endSeconds = '0'+endSeconds;
-
-
-
-
 
                 let res = startYear+""+startMonth+""+startDay+""+(startHours)+""+startMinutes;
-
-
                 let res2 =endYear+""+endMonth+""+endDay+""+(endHours)+""+endMinutes;
-
 
                // console.log("d="+res);
                // console.log("d2="+res2);
@@ -195,12 +170,13 @@
              //  console.log("data:"+d.getDay()+ " day="+endDay);
 
                 //console.log(d);
-               if (flag_right == 0)
-               {flag_right = 1;
+               if (flag_right === 0)
+               {
+                   flag_right = 1;
                //  ..  $('.fc-next-button').click();
                }
 
-                return res >= res2;
+                return res >= res2 && (dropInfo.start-d2) / 36e5 > 24;
 
                 //   alert(d);
                 //   alert(d2);
@@ -209,13 +185,12 @@
                 //   alert(d);
                 // return   < new;
 
-
             },
             eventDrop: function (info) {   //после отпускания урока (когда тащишь и бросаешь)
 
                 let s = info.event.start.toLocaleString();
 
-                $('.input_tema').val(info.event.title)
+                $('.input_tema').val(info.event.title.split('\n')[1])
                 let a = s.split(' ');
                 let date = a[0];
                 date = date.replace(',', '');
@@ -234,7 +209,7 @@
                 $("label[for=id_time_start]").hide(); //лэйбел (текст рядом)
                 $("#id_time_start_prc").val(info.event.start.toLocaleString().replace(',', ''));  //todo удалить секунды
                 $("#id_duration").val((info.event._instance.range.end - info.event._instance.range.start) / 60000);
-                $("#id_subject").val(info.event.title).trigger('focus');
+                $("#id_subject").val(info.event.title.split('\n')[1]).trigger('focus');
                 $('.delete-btn').show();
             },
             timeZone: 'local',
@@ -248,22 +223,27 @@
                 <?php
                 if (intval($clNav->flag_uchitel) == 1)  //это учитель
                 {
-                    $r2 = $clMysql->query("SELECT * FROM raspisanie WHERE profile_uchitel_id='$clNav->profile_id'");
+                    $r2 = $clMysql->query("SELECT * FROM raspisanie r 
+                                                 LEFT JOIN profile p ON r.profile_id = p.id 
+                                                    WHERE r.profile_uchitel_id='$clNav->profile_id'");
                 }
                 else
                 {
-                    $r2 = $clMysql->query("SELECT * FROM raspisanie WHERE profile_id='$clNav->profile_id' and profile_uchitel_id='$clNav->profile_uchitel_id'");
+                    $r2 = $clMysql->query("SELECT * FROM raspisanie r
+                                                 LEFT JOIN profile p ON r.profile_id = p.id
+                                                    WHERE profile_id='$clNav->profile_id' AND 
+                                                          r.profile_uchitel_id='$clNav->profile_uchitel_id'");
                 }
                 while ($row= $r2->fetch_array()) { ?>
                 {
                     backgroundColor: '#a941c2',
-                    id: '<?=$row["id"]?>',
-                    title: '<?=$row["title"]?>',
+                    id: '<?=$row[0]?>',
+                    title: '<?=$row["name"]?>\n<?=$row["title"]?>',
                     start: '<?=$row["data_yroka"]?>',
                     end: '<?=$row["data_yroka"]?>',
-                    id_row: '<?=$row["id"]?>'
+                    id_row: '<?=$row[0]?>'
                 },
-                <?php } ?>
+                <?php }?>
         ]
         });
         calendar.setOption('locale', 'ru');
@@ -307,9 +287,9 @@
         });
 
         function show_dialog_calendar() {
-
             $('.dialog_calendar').css({display: 'block'}).fadeIn(200);
             $('.fade').fadeIn(200);
+            $('body').css({overflow: 'hidden', width: '98.3vw'});
         }
 
     })

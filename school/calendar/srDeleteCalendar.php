@@ -1,8 +1,8 @@
-<?
+<?php
 include $_SERVER['DOCUMENT_ROOT'].'/clMysql.php'; //Подключаем класс для работы с БД
 
 
-$clMysql = new clMysql(); ///Создаём экземляер класса mysql
+$clMysql = new clMysql(); ///Создаём экземпляр класса mysql
 $clMysql->ConnectedDefaultBase();
 
 
@@ -12,9 +12,4 @@ $clMysql->ConnectedDefaultBase();
 
 $id = $_POST['id'];
 
-
-$clMysql->query("DELETE FROM  raspisanie   WHERE id=$id");
-
-
-
-?>
+$clMysql->query("DELETE FROM raspisanie WHERE id=$id");

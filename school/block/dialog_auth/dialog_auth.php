@@ -2,7 +2,9 @@
     <div style="border-bottom: 1px solid #908bd9;">
 
         <div style="float: right; margin-top: 15px; margin-right: 15px;cursor: pointer;"
-             onclick="document.getElementById('dialog_auth').style.display='none';$('#fade').css({display:'none'});">
+             onclick="document.getElementById('dialog_auth').style.display='none';$('#fade').css({display:'none'});
+             $('body').css({overflow: 'auto', width: '100%'})"
+        >
             <img src="/img/close.png" alt="x"></div>
 
         <div class="h1" style="
@@ -27,7 +29,7 @@
     <div class="h1 reg-label">Пароль
     </div>
 
-    <div style="border-bottom: 1px solid #908bd9;">
+    <div style="border-bottom: 1px solid #908bd9;padding-bottom: 22px;">
 
         <div class="h1 reg-input">
             <label>
@@ -67,6 +69,7 @@
     function show_form_reg() {
         $('.dialog_auth').css({display: 'none'});
         $('.dialog_reg').css({display: 'block'});
+        $('body').css({overflow: 'hidden', width: '98.3vw'});
     }
 
     function auth() {
@@ -77,7 +80,8 @@
 
         $.post('/block/dialog_auth/srAuth.php', ({'email': auth_email, 'pass': auth_pass}), function (h) {
             if (h === 'ok') {
-              location.href = '/';
+                $('body').css({overflow: 'auto', width: '100%'});
+                location.href = '/';
             } else {
                 $('.auth_email').animate({backgroundColor: 'red'}, 500, function () {
 

@@ -22,7 +22,7 @@ $clNav = new clNav($clMysql);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная страница</title>
+    <title>Главная страница - Mercury School</title>
     <meta lang="ru" content="Уроки по математике. Дистанционно. Онлайн доска. Подготовка ВПР, ОГЭ, ЕГЭ, повышение успеваемости." name="description">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
@@ -52,7 +52,9 @@ $clNav = new clNav($clMysql);
 
 <div id="fade" class="fade"
      onclick="$('.dialog_reg').css({display:'none'});$('.dialog_auth').css({display:'none'});
-              $('.dialog_calendar').css({display:'none'});$('.fade').css({display:'none'});">
+              $('.dialog_calendar').css({display:'none'});$('.fade').css({display:'none'});
+    $('body').css({overflow: 'auto', width: '100%'});"
+>
 </div>
 
 <?php
