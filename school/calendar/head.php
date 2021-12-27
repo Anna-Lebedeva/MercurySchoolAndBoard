@@ -289,7 +289,8 @@
         function show_dialog_calendar() {
             $('.dialog_calendar').css({display: 'block'}).fadeIn(200);
             $('.fade').fadeIn(200);
-            $('body').css({overflow: 'hidden', width: '98.3vw'});
+            const body = $('body');
+            body.css({overflow: 'hidden', width: body.outerWidth()});
         }
 
     })

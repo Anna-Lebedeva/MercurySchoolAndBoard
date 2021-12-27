@@ -69,7 +69,8 @@
     function show_form_reg() {
         $('.dialog_auth').css({display: 'none'});
         $('.dialog_reg').css({display: 'block'});
-        $('body').css({overflow: 'hidden', width: '98.3vw'});
+        const body = $('body');
+        body.css({overflow: 'hidden', width: body.outerWidth()});
     }
 
     function auth() {

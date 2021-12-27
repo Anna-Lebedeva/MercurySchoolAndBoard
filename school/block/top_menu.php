@@ -86,17 +86,19 @@
     function show_dialog_auth() {
 
         // document.getElementById('dialog_auth').style.display='block';document.getElementById('fade').style.display='block';
+        //    $('.dialog_auth').animate({top:'50px',height:'200px'},1000)
 
         $('.dialog_auth').fadeIn(200);
         $('.fade').fadeIn(200);
-        $('body').css({overflow: 'hidden', width: '98.3vw'});
-        //    $('.dialog_auth').animate({top:'50px',height:'200px'},1000)
+        const body = $('body');
+        body.css({overflow: 'hidden', width: body.outerWidth()});
     }
 
     function show_dialog_reg() {
         $('.dialog_reg').fadeIn(200);
         $('.fade').fadeIn(200);
-        $('body').css({overflow: 'hidden', width: '98.3vw'})
+        const body = $('body');
+        body.css({overflow: 'hidden', width: body.outerWidth()});
     }
 
     const chosen_book = localStorage.getItem('chosen_book')
