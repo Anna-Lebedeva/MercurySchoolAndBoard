@@ -22,7 +22,7 @@ else
             <img class="bank-card-img" src="/img/finance/sber2.jpg" alt="">
         </td>
         <td>
-            <span class="bank-card-text">Номер карты Сбербанк: 63900255 9036311627</span>
+            <span class="bank-card-text">Номер карты Сбербанк: 2202 2035 0449 1855</span>
         </td>
     <tr>
         <td>
