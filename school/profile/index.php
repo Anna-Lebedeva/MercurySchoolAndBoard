@@ -116,10 +116,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
      ?>   <div style="text-align: left; color: #d4c5ff; font-size: 26px">Вам еще подбирается учитель</div>
         <br>
 
-        <div style="text-align: left; color: #ffd580; font-size: 26px">Для лучшего подбора заполни анкету "Мой идеальный учитель":</div>
-
-        <br>
-        <div class="teacher-param-label">Строгость</div>
+<!--        <div style="text-align: left; color: #ffd580; font-size: 26px">Для лучшего подбора заполни анкету "Мой идеальный учитель":</div>-->
+<!---->
+<!--        <br>-->
+<!--        <div class="teacher-param-label">Строгость</div>-->
 
 
     <style>
@@ -185,35 +185,35 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
     <!--<h2>Custom Select</h2>-->
 
     <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
-    <div class="custom-select teacher-params">
-        <select>
-            <option value="0">Выбери строгость</option>
-            <option value="1">Добрый:)</option>
-            <option value="2">Средний</option>
-            <option value="3">Строгий</option>
-        </select>
-    </div>
-
-    <div class="teacher-param-label">Задает домашнее задание</div>
-
-    <div class="custom-select">
-        <select>
-            <option value="0">Задает д/з</option>
-            <option value="1">Не задаёт</option>
-            <option value="2">Задаёт немного</option>
-            <option value="3">Задаёт</option>
-        </select>
-    </div>
-
-    <div class="teacher-param-label">Возраст</div>
-    <div class="custom-select teacher-params">
-        <select>
-            <option value="0">Возраст</option>
-            <option value="1">Молодой</option>
-            <option value="2">Средних лет</option>
-            <option value="3">Солидный</option>
-        </select>
-    </div>
+<!--    <div class="custom-select teacher-params">-->
+<!--        <select>-->
+<!--            <option value="0">Выбери строгость</option>-->
+<!--            <option value="1">Добрый:)</option>-->
+<!--            <option value="2">Средний</option>-->
+<!--            <option value="3">Строгий</option>-->
+<!--        </select>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="teacher-param-label">Задает домашнее задание</div>-->
+<!---->
+<!--    <div class="custom-select">-->
+<!--        <select>-->
+<!--            <option value="0">Задает д/з</option>-->
+<!--            <option value="1">Не задаёт</option>-->
+<!--            <option value="2">Задаёт немного</option>-->
+<!--            <option value="3">Задаёт</option>-->
+<!--        </select>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="teacher-param-label">Возраст</div>-->
+<!--    <div class="custom-select teacher-params">-->
+<!--        <select>-->
+<!--            <option value="0">Возраст</option>-->
+<!--            <option value="1">Молодой</option>-->
+<!--            <option value="2">Средних лет</option>-->
+<!--            <option value="3">Солидный</option>-->
+<!--        </select>-->
+<!--    </div>-->
 
     <script>
         var x, i, j, selElmnt, a, b, c;
