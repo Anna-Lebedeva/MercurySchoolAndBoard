@@ -69,7 +69,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/block/top_menu.php'; //подключае�
         <td>
             <div id="fullscreen-bg">
                 <video loop="" muted="" autoplay="" poster="img/zvezdnoe.jpg" class="fullscreen-bg__video">
-                    <source src="https://storage.googleapis.com/ms_storage/starVideo.mp4" type="video/mp4">
+                    <source src="/video/starVideo.mp4" type="video/mp4"/>
                 </video>
             </div>
         </td>
